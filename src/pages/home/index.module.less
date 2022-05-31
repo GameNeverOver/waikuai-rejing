@@ -1,0 +1,123 @@
+@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
+
+.my_page {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 70px;
+  .banner {
+    width: 100vw;
+    height: calc(297 * 100vw / 375);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .handle_menu {
+    z-index: 1111111111111;
+    text-align: center;
+    // margin-top: -20px;
+    padding-top: calc(180 * 100vw / 375);
+    z-index: 99999;
+    .handle_option {
+      margin: auto;
+      width: calc(100vw - 40px);
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: calc(20 * 100vw / 375);
+      border-radius: calc(12 * 100vw / 375);
+      margin-bottom: calc(15 * 100vw / 375);
+      .add_img {
+        width: calc(54 * 100vw / 375);
+        height: calc(54 * 100vw / 375);
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      .img_right {
+        width: calc(16 * 100vw / 375);
+        height: calc(16 * 100vw / 375);
+      }
+    }
+  }
+}
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.4);
+  .show_link {
+    background: #fff;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    padding: 0 calc(20 / 375 * 100vw);
+    border-radius: 20px 20px 0px 0px;
+    image{
+      position: absolute;
+      right: calc(20/ 375 * 100vw);
+      top: calc(20/ 375 * 100vw);
+      width: calc(14/ 375 * 100vw);
+      height: calc(14/ 375 * 100vw);
+    }
+    .title {
+      margin-bottom: calc(5 / 375 * 100vw);
+      margin-top: calc(20 / 375 * 100vw);
+      font-size: 18px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #2C3138;
+      line-height: 25px;
+      text-align: center;
+    }
+     .spacingIphone {
+      height: 34px;
+    }
+    .link_item {
+      line-height: 20px;
+      font-size: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: calc(20 / 375 * 100vw) 0;
+      text:first-child {
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #999999;
+        line-height: 17px;
+        margin-bottom: 3px;
+      }
+      text:last-child {
+        font-size: 14px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #333333;
+        line-height: 20px;
+      }
+      view {
+        position: absolute;
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #333333;
+        line-height: 18px;
+        height: 28px;
+        padding: calc(5 * 100vw / 375) calc(15 * 100vw / 375);
+        border-radius: 2px;
+        border: 1px solid #e6e6e6;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}

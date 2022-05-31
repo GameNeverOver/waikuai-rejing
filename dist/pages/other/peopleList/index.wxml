@@ -1,0 +1,33 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.people_page}}">
+        <mm-navigation compid="{{$compid__14}}"></mm-navigation>
+        <view class="{{styles.sadd_action}}" bindtap="anonymousFunc0">
+            <view style="{{anonymousState__temp}}">
+                <image src="{{anonymousState__temp2}}" class="{{styles.add_img}}"></image>
+                <view>添加受检人</view>
+            </view>
+            <image src="{{anonymousState__temp3}}" class="{{styles.img_right}}"></image>
+        </view>
+        <view class="{{styles.list}}">
+            <view wx:key="id" class="{{styles.record}}" style="{{ele.$loopState__temp5}}" wx:for="{{loopArray4}}" wx:for-item="ele" wx:for-index="idx">
+                <view bindtouchstart="anonymousFunc1" bindtouchend="anonymousFunc2" data-e-touchstart-so="this" data-e-touchstart-a-a="{{ele._$indexKey}}" data-e-touchend-so="this" data-e-touchend-a-a="{{ele._$indexKey2}}">
+                    <view class="{{styles.name}}">{{ele.$original.userName}}</view>
+                    <view class="{{styles.id}}">证件号码：{{ele.$original.idCardNo}}</view>
+                </view>
+                <view class="{{styles.handle}}" style="{{ele.$loopState__temp7}}">
+                    <view class="{{styles.white_block}}"></view>
+                    <view class="{{styles.edit}}" bindtap="anonymousFunc3" data-e-tap-so="this" data-e-tap-a-a="{{ele._$indexKey3}}">编辑</view>
+                    <view class="{{styles.del}}" bindtap="anonymousFunc4" data-e-tap-so="this" data-e-tap-a-a="{{ele._$indexKey4}}">删除</view>
+                </view>
+            </view>
+            <block wx:if="{{isNewIphone}}">
+                <view class="spacingIphone"></view>
+            </block>
+        </view>
+        <block wx:if="{{!arr.length}}">
+            <view class="{{styles.empty}}">
+                <image src="{{anonymousState__temp8}}"></image><text>暂无受检人~</text>
+            </view>
+        </block>
+    </view>
+</block>

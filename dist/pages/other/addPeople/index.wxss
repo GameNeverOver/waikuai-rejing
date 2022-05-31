@@ -1,0 +1,91 @@
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.index-module__addPeople_page___TclSz {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 70px;
+  background: -webkit-linear-gradient(322deg, #DDEFFF 0%, #FFFFFF 100%);
+  background: -o-linear-gradient(322deg, #DDEFFF 0%, #FFFFFF 100%);
+  background: linear-gradient(128deg, #DDEFFF 0%, #FFFFFF 100%);
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m {
+  padding: 20px;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px solid #E6E6E6;
+  padding-bottom: 12px;
+  padding-top: 20px;
+  margin-right: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV image {
+  position: absolute;
+  width: calc(16 * 100vw / 375);
+  height: calc(16 * 100vw / 375);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV view {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV text {
+  color: #f00;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV .index-module__field___3FLi3 {
+  width: 90px;
+  color: #333;
+  margin-right: 20px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 22px;
+  white-space: nowrap;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV .index-module__val___1_XQC {
+  width: 80%;
+  position: relative;
+}
+.index-module__addPeople_page___TclSz .index-module__info___2u-2m .index-module__record___12IsV input {
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 22px;
+  width: 80%;
+}
+.index-module__addPeople_page___TclSz .index-module__sub_btn___28DGE {
+  font-size: 16px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 24px;
+  width: calc(100vw - 30px);
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #1174F4;
+  border-radius: 22px;
+  padding: calc(10 * 100vw / 375) 0;
+  text-align: center;
+  bottom: 0;
+}

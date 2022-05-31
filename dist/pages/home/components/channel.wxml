@@ -1,0 +1,18 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.modal}}">
+        <view></view>
+        <view class="{{styles.show_link}}" catchtap="anonymousFunc0">
+            <image src="{{anonymousState__temp}}" bindtap="anonymousFunc1"></image>
+            <view class="{{styles.title}}">采购渠道</view>
+            <view class="{{styles.link_item}}"><text>销售电话： </text><text>400-815-1117</text>
+                <view bindtap="anonymousFunc2">拨打</view>
+            </view>
+            <view class="{{styles.link_item}}" style="{{anonymousState__temp2}}"><text>京东链接：</text><text style="{{anonymousState__temp3}}">https://mall.jd.com/index-1000416021.html</text>{{' '}}
+                <view class="{{styles.copy}}" bindtap="anonymousFunc3">复制</view>
+            </view>
+            <block wx:if="{{isNewIphone}}">
+                <view class="{{styles.spacingIphone}}"></view>
+            </block>
+        </view>
+    </view>
+</block>

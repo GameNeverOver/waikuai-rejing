@@ -1,0 +1,69 @@
+@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
+
+.stepInfo {
+    padding      : 20px 15px;
+    background   : rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    margin-top   : 10px;
+    background   : rgba(255, 255, 255, 1);
+
+    .title {
+        width          : 79px;
+        font-size      : 17px;
+        font-weight    : 500;
+        color          : rgba(51, 51, 51, 1);
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+
+    .stpes {
+        margin-top : 20px;
+        padding    : 0 14px;
+        border-left: 1px dashed #DCDCDC;
+        font-size  : 14px;
+        font-weight: 500;
+
+        .name {
+            position: relative;
+        }
+
+        //左侧圆圈
+        .name::after {
+            content      : attr(View);
+            width        : 8px;
+            height       : 8px;
+            background   : rgba(255, 255, 255, 1);
+            border       : 2px solid;
+            border-radius: 50%;
+            position     : absolute;
+            left         : -20px;
+            top          : 4px;
+        }
+
+        .wait {
+            color        : rgba(248, 142, 30, 1);
+            margin-bottom: 20px;
+        }
+
+        .pass {
+            color        : rgba(0, 71, 156, 1);
+            margin-bottom: 20px;
+        }
+
+        .refuse {
+            color        : rgba(217, 34, 42, 1);
+            margin-bottom: 20px;
+        }
+
+        .self {
+            font-weight: 400;
+            color      : rgba(153, 153, 153, 1);
+        }
+
+        .other {
+            color        : rgba(153, 153, 153, 1);
+            margin-bottom: 20px;
+        }
+    }
+}

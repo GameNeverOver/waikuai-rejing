@@ -1,0 +1,18 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.my_page}}">
+        <mm-navigation compid="{{$compid__12}}"></mm-navigation>
+        <image src="{{anonymousState__temp}}" class="{{styles.bg}}"></image>
+        <view class="{{styles.head}}">
+            <image src="{{anonymousState__temp2}}"></image><text>{{userInfo.nickname || ''}}</text>
+        </view>
+        <view class="{{styles.action}}" bindtap="anonymousFunc0">
+            <image src="{{anonymousState__temp3}}"></image><text>受检人</text>
+            <image src="{{anonymousState__temp4}}" class="{{styles.img_right}}"></image>
+        </view>
+        <view class="{{styles.action}}" bindtap="anonymousFunc1">
+            <image src="{{anonymousState__temp5}}"></image><text>检测记录</text>
+            <image src="{{anonymousState__temp6}}" class="{{styles.img_right}}"></image>
+        </view>
+        <view class="{{styles.exit}}" bindtap="anonymousFunc2">{{userInfo.mobileNo ? '退出登录' : '去授权'}}</view>
+    </view>
+</block>

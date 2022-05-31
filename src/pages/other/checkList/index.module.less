@@ -1,0 +1,89 @@
+@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
+
+.check_page {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 70px;
+  padding: calc(15 * 100vw / 375) calc(20 * 100vw / 375);
+  background: linear-gradient(128deg, #ddefff 0%, #f4f6f9 100%);
+  .empty {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    image {
+      width: calc(156 * 100vw / 375);
+      height: calc(156 * 100vw / 375);
+      display: block;
+      margin-top: calc(150 * 100vw / 375);
+      margin-bottom: calc(30 * 100vw / 375);
+    }
+  }
+  .list {
+    .record_box {
+      background: #fff;
+      border-radius: 10px;
+      padding: calc(20 * 100vw / 375);
+      margin-bottom: 10px;
+      position: relative;
+      .time {
+        text-indent: calc(60 * 100vw / 375);
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #999999;
+        line-height: 20px;
+        margin-top: 5px;
+      }
+      .record {
+        display: flex;
+        align-items: center;
+        image {
+          width: calc(50 * 100vw / 375);
+          height: calc(50 * 100vw / 375);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .name {
+          font-size: 16px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: #2c3138;
+          line-height: 22px;
+          margin-bottom: 6px;
+        }
+        .id {
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #999999;
+          line-height: 20px;
+        }
+      }
+      .result {
+        position: absolute;
+        right: calc(20 * 100vw / 375);
+        top: calc(20 * 100vw / 375);
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #1174f4;
+        line-height: 22px;
+      }
+    }
+  }
+  .add {
+    color: #fff;
+    background: #77f;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+  }
+}

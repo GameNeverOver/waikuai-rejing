@@ -1,0 +1,41 @@
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.index-module__explain_page___2e_AM {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+.index-module__explain_page___2e_AM video {
+  width: 100vw;
+  height: calc(211 * 100vw / 375);
+  display: block;
+  margin-bottom: calc(20 * 100vw / 375);
+}
+.index-module__explain_page___2e_AM .index-module__sadd_action___3fFS4 {
+  margin: auto;
+  width: calc(100vw - 40px);
+  background: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: calc(20 * 100vw / 375);
+  border-radius: calc(12 * 100vw / 375);
+  margin-bottom: calc(15 * 100vw / 375);
+}
+.index-module__explain_page___2e_AM .index-module__sadd_action___3fFS4 .index-module__add_img___2a-VA {
+  width: calc(54 * 100vw / 375);
+  height: calc(54 * 100vw / 375);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.index-module__explain_page___2e_AM .index-module__sadd_action___3fFS4 .index-module__img_right___1JVBA {
+  width: calc(16 * 100vw / 375);
+  height: calc(16 * 100vw / 375);
+}

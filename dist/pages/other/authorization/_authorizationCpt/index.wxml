@@ -1,0 +1,3 @@
+<block wx:if="{{$taroCompReady}}">
+    <button class="{{styles.authorizationBtn}}" bindtap="anonymousFunc0"></button>
+</block>

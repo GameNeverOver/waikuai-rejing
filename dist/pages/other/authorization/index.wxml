@@ -1,0 +1,12 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.authorization_page}}">
+        <view class="{{styles.authorization}}">
+            <image src="{{anonymousState__temp}}"></image>
+            <block wx:if="{{userInfo.avatarUrl}}">
+                <phone-authorization></phone-authorization>
+            </block>
+            <block wx:if="{{!userInfo.avatarUrl}}">
+                <head-authorization></head-authorization>
+            </block>{{userInfo.avatarUrl ? '授权手机号' : '授权登录'}}</view>
+    </view>
+</block>

@@ -1,0 +1,80 @@
+@import '@wmeimob/taro-design/src/components/styles/themes/default.less';
+
+.addPeople_page {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 70px;
+  background: linear-gradient(128deg, #DDEFFF 0%, #FFFFFF 100%);
+  .info {
+    padding: 20px;
+    .record {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-bottom: 0.5px solid #E6E6E6;;
+      padding-bottom: 12px;
+      padding-top: 20px;
+      margin-right: 5px;
+      font-size: 18px;
+      line-height: 20px;
+      overflow: hidden;
+      image{
+        position: absolute;
+        width: calc(16 * 100vw / 375);
+        height: calc(16 * 100vw / 375);
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      view{
+        display: flex;
+        align-items: center;
+      }
+      text {
+        color: #f00;
+      }
+      .field {
+        width: 90px;
+        color: #333;
+        margin-right: 20px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #333333;
+        line-height: 22px;
+        white-space: nowrap;
+      }
+      .val{
+        width: 80%;
+        position: relative;
+      }
+      input{
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #333333;
+        line-height: 22px;
+        width: 80%;
+      }
+    }
+  }
+  .sub_btn{
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 24px;
+    width: calc(100vw - 30px);
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #1174F4;
+    border-radius: 22px;
+    padding: calc(10 * 100vw / 375) 0;
+    text-align: center;
+    bottom: 0;
+  }
+}

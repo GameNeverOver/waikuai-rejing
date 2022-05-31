@@ -1,0 +1,12 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.explain_page}}">
+        <video poster="{{imgUrl}}" src="{{videoUrl}}"></video>
+        <view class="{{styles.sadd_action}}" bindtap="anonymousFunc0">
+            <view style="{{anonymousState__temp}}">
+                <image src="{{anonymousState__temp2}}" class="{{styles.add_img}}"></image>
+                <view>检测说明</view>
+            </view>
+            <image src="{{anonymousState__temp3}}" class="{{styles.img_right}}"></image>
+        </view>
+    </view>
+</block>

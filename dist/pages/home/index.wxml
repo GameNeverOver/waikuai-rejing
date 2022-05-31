@@ -1,0 +1,39 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.my_page}}">
+        <mm-navigation compid="{{$compid__10}}"></mm-navigation>
+        <image src="{{anonymousState__temp}}" class="{{styles.banner}}"></image>
+        <view class="{{styles.handle_menu}}">
+            <view class="{{styles.handle_option}}" bindtap="anonymousFunc0">
+                <view style="{{anonymousState__temp2}}">
+                    <image src="{{anonymousState__temp3}}" class="{{styles.add_img}}"></image>
+                    <view>检测说明</view>
+                </view>
+                <image src="{{anonymousState__temp4}}" class="{{styles.img_right}}"></image>
+            </view>
+            <view class="{{styles.handle_option}}" bindtap="anonymousFunc1">
+                <view style="{{anonymousState__temp5}}">
+                    <image src="{{anonymousState__temp6}}" class="{{styles.add_img}}"></image>
+                    <view>添加受检人</view>
+                </view>
+                <image src="{{anonymousState__temp7}}" class="{{styles.img_right}}"></image>
+            </view>
+            <view class="{{styles.handle_option}}" bindtap="anonymousFunc2">
+                <view style="{{anonymousState__temp8}}">
+                    <image src="{{anonymousState__temp9}}" class="{{styles.add_img}}"></image>
+                    <view>结果上传</view>
+                </view>
+                <image src="{{anonymousState__temp10}}" class="{{styles.img_right}}"></image>
+            </view>
+            <view class="{{styles.handle_option}}" bindtap="anonymousFunc3">
+                <view style="{{anonymousState__temp11}}">
+                    <image src="{{anonymousState__temp12}}" class="{{styles.add_img}}"></image>
+                    <view>采购渠道</view>
+                </view>
+                <image src="{{anonymousState__temp13}}" class="{{styles.img_right}}"></image>
+            </view>
+        </view>
+        <block wx:if="{{visible}}">
+            <channel compid="{{$compid__11}}"></channel>
+        </block>
+    </view>
+</block>
