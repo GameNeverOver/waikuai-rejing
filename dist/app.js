@@ -123,7 +123,7 @@ var _App = function (_BaseComponent) {
         image: _indexModules2.default.home,
         imageSelected: _indexModules2.default.home_select,
         'url': '/pages/home/index',
-        'text': '首页'
+        'text': '热景自测'
       }, {
         image: _indexModules2.default.mine,
         imageSelected: _indexModules2.default.mine_select,

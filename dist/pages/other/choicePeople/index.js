@@ -75,7 +75,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '结果上传',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp3", "anonymousState__temp4", "loopArray5", "$compid__15", "styles", "arr", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp3", "anonymousState__temp4", "loopArray41", "$compid__79", "styles", "arr", "isNewIphone"], _this.anonymousFunc0Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -96,10 +96,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__79"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__15 = _genCompid2[0],
-          $compid__15 = _genCompid2[1];
+          $prevCompid__79 = _genCompid2[0],
+          $compid__79 = _genCompid2[1];
 
       var _useState = (0, _taroWeapp.useState)([]),
           _useState2 = _slicedToArray(_useState, 2),
@@ -189,19 +189,20 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
       var anonymousState__temp4 = __webpack_require__(/*! ./img/add.png */ "./src/pages/other/choicePeople/img/add.png");
 
-      var loopArray5 = arr.map(function (ele, idx) {
+      var loopArray41 = arr.map(function (ele, idx) {
         ele = {
           $original: (0, _taroWeapp.internal_get_original)(ele)
         };
 
-        var _$indexKey = "bezzz" + idx;
+        var _$indexKey = "fjzzz" + idx;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           var archive = _taroWeapp2.default.getStorageSync('archive');
           if (archive) {
+            var info = JSON.parse(archive);
             _taroWeapp2.default.showModal({
               title: '提示',
-              content: "\u60A8\u6709\u5C1A\u672A\u7ED3\u675F\u7684\u4EFB\u52A1\uFF0C\u662F\u5426\u7EE7\u7EED\u8FDB\u884C\uFF1F",
+              content: "\u53D7\u68C0\u4EBA '" + info.userName + "' \u6709\u672A\u7ED3\u675F\u7684\u68C0\u6D4B\u4EFB\u52A1\uFF0C\u662F\u5426\u7EE7\u7EED\u8FDB\u884C\uFF1F",
               success: function success(res) {
                 if (!res.cancel) {
                   _taroWeapp2.default.navigateTo({
@@ -210,7 +211,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
                 } else {
                   _taroWeapp2.default.setStorageSync('archive', '');
                   _taroWeapp2.default.navigateTo({
-                    url: '/pages/other/uploadResult/index?id=' + ele.$original.id
+                    url: '/pages/other/uploadResult/index?id=' + ele.$original.id + '&userName=' + ele.$original.userName
                   });
                 }
               }
@@ -234,12 +235,12 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": "\u7ED3\u679C\u4E0A\u4F20"
-      }, $compid__15, $prevCompid__15);
+      }, $compid__79, $prevCompid__79);
       Object.assign(this.__state, {
         anonymousState__temp3: anonymousState__temp3,
         anonymousState__temp4: anonymousState__temp4,
-        loopArray5: loopArray5,
-        $compid__15: $compid__15,
+        loopArray41: loopArray41,
+        $compid__79: $compid__79,
         styles: styles,
         arr: arr,
         isNewIphone: _index.isNewIphone

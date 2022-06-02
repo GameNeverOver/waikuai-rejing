@@ -78,7 +78,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '首页',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "$compid__10", "$compid__11", "styles", "visible"], _this.customComponents = ["MMNavigation", "Channel"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "$compid__48", "$compid__49", "styles", "visible"], _this.customComponents = ["MMNavigation", "Channel"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -99,15 +99,15 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__48"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__10 = _genCompid2[0],
-          $compid__10 = _genCompid2[1];
+          $prevCompid__48 = _genCompid2[0],
+          $compid__48 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__49"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__11 = _genCompid4[0],
-          $compid__11 = _genCompid4[1];
+          $prevCompid__49 = _genCompid4[0],
+          $compid__49 = _genCompid4[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           userInfo = _useContext.userInfo;
@@ -159,6 +159,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         };
       }();
       (0, _taroWeapp.useEffect)(function () {
+        // enlarge('https://img1.baidu.com/it/u=623467748,1833810837&fm=253&fmt=auto&app=138&f=JPEG?w=231&h=500')
         console.log(userInfo, 'home 页面..');
         getIntiInfo();
       }, []);
@@ -220,10 +221,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": "\u9996\u9875"
-      }, $compid__10, $prevCompid__10);
+      }, $compid__48, $prevCompid__48);
       visible && _taroWeapp.propsManager.set({
         "onClose": this.anonymousFunc4
-      }, $compid__11, $prevCompid__11);
+      }, $compid__49, $prevCompid__49);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -238,8 +239,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp11: anonymousState__temp11,
         anonymousState__temp12: anonymousState__temp12,
         anonymousState__temp13: anonymousState__temp13,
-        $compid__10: $compid__10,
-        $compid__11: $compid__11,
+        $compid__48: $compid__48,
+        $compid__49: $compid__49,
         styles: styles,
         visible: visible
       });

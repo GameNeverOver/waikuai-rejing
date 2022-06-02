@@ -1,208 +1,209 @@
 {
-	"projectname": "%E7%88%B1%E4%BF%A1%E7%B2%BE%E6%9C%BA-%E9%87%8D%E6%9E%84-%E7%94%A8%E6%88%B7%E7%AB%AF",
-	"description": "",
-	"appid": "wxab64d0db8333845a",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"useMultiFrameRuntime": true,
-		"useApiHook": true,
-		"useApiHostProcess": false,
-		"enableEngineNative": false,
-		"userConfirmedBundleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": [],
-		"minifyWXSS": true
-	},
-	"compileType": "miniprogram",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"libVersion": "2.16.0",
-	"condition": {
-		"plugin": {
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"gamePlugin": {
-			"list": []
-		},
-		"miniprogram": {
-			"list": [
-				{
-					"name": "爱信家族-仪器详情",
-					"pathName": "pages/familyModule/goodDetail/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的订单",
-					"pathName": "pages/homeModule/myOrder/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "订单详情",
-					"pathName": "pages/homeModule/orderDetail/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "商品列表",
-					"pathName": "pages/familyModule/productList/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "爱信家族-仪器详情",
-					"pathName": "pages/familyModule/goodDetail/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "预约",
-					"pathName": "pages/familyModule/makeAnAppointment/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/mine/children/draw/index",
-					"pathName": "pages/mine/children/draw/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "适用商品",
-					"pathName": "pages/mine/children/applicableGoods/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "预约信息",
-					"pathName": "pages/familyModule/appointmentInfo/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "购物车",
-					"pathName": "pages/familyModule/shoppingCart/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "门店详情",
-					"pathName": "pages/storeModule/storeDetail/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "门店信息",
-					"pathName": "pages/storeModule/storeInfo/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的奖品",
-					"pathName": "pages/mine/children/myPrize/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的专属门店",
-					"pathName": "pages/mine/children/myStore/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的收藏",
-					"pathName": "pages/mine/children/myCollect/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/mine/index",
-					"pathName": "pages/mine/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "地图",
-					"pathName": "pages/map/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "地图",
-					"pathName": "pages/mine/children/map/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "个人信息",
-					"pathName": "pages/mine/children/userInfo/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的订单",
-					"pathName": "pages/familyModule/shoppingCart/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/mine/children/receiveAddress/index",
-					"pathName": "pages/mine/children/receiveAddress/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/login/index",
-					"pathName": "pages/login/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/login/index",
-					"pathName": "pages/login/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/home/index",
-					"pathName": "pages/test/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "pages/test/index",
-					"pathName": "pages/test/index",
-					"scene": null
-				}
-			]
-		}
-	}
+  "miniprogramRoot": "./",
+  "projectname": "%E7%88%B1%E4%BF%A1%E7%B2%BE%E6%9C%BA-%E9%87%8D%E6%9E%84-%E7%94%A8%E6%88%B7%E7%AB%AF",
+  "description": "",
+  "appid": "wxab64d0db8333845a",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "libVersion": "2.16.0",
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "爱信家族-仪器详情",
+          "pathName": "pages/familyModule/goodDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的订单",
+          "pathName": "pages/homeModule/myOrder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情",
+          "pathName": "pages/homeModule/orderDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/familyModule/productList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "爱信家族-仪器详情",
+          "pathName": "pages/familyModule/goodDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约",
+          "pathName": "pages/familyModule/makeAnAppointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/children/draw/index",
+          "pathName": "pages/mine/children/draw/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "适用商品",
+          "pathName": "pages/mine/children/applicableGoods/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约信息",
+          "pathName": "pages/familyModule/appointmentInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/familyModule/shoppingCart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "门店详情",
+          "pathName": "pages/storeModule/storeDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "门店信息",
+          "pathName": "pages/storeModule/storeInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的奖品",
+          "pathName": "pages/mine/children/myPrize/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的专属门店",
+          "pathName": "pages/mine/children/myStore/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的收藏",
+          "pathName": "pages/mine/children/myCollect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/index",
+          "pathName": "pages/mine/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/map/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/mine/children/map/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人信息",
+          "pathName": "pages/mine/children/userInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的订单",
+          "pathName": "pages/familyModule/shoppingCart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/children/receiveAddress/index",
+          "pathName": "pages/mine/children/receiveAddress/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/index",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/index",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/index",
+          "pathName": "pages/test/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test/index",
+          "pathName": "pages/test/index",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

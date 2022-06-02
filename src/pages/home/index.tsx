@@ -11,7 +11,8 @@ import { observer } from '@tarojs/mobx'
 import $Store from '~/globalStore'
 import Channel from './components/channel'
 import { post } from '~/components/request'
-import { getUserInfo } from '~/components/utils'
+import { getUserInfo, enlarge } from '~/components/utils'
+
 
 const Index: FC = () => {
   const { userInfo } = useContext($Store)
@@ -31,6 +32,7 @@ const Index: FC = () => {
   }
 
   useEffect(() => {
+    // enlarge('https://img1.baidu.com/it/u=623467748,1833810837&fm=253&fmt=auto&app=138&f=JPEG?w=231&h=500')
     console.log(userInfo, 'home 页面..')
     getIntiInfo()
   }, [])

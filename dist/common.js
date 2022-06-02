@@ -334,7 +334,7 @@ module.exports = {"tabBarFontColor":"#cccccc","primaryColor":"#1890ff","iconSize
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.isId = exports.isMobile = exports.toast = exports.getUserInfo = undefined;
+exports.enlarge = exports.isId = exports.isMobile = exports.toast = exports.getUserInfo = undefined;
 
 var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
 
@@ -471,6 +471,13 @@ var isId = exports.isId = function isId(card) {
   // 身份证
   var reg = /(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/;
   return reg.test(card);
+};
+var enlarge = exports.enlarge = function enlarge(url) {
+  //图片预览
+  _taroWeapp2.default.previewImage({
+    current: url,
+    urls: [url]
+  });
 };
 
 /***/ }),

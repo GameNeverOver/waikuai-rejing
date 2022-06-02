@@ -111,7 +111,7 @@ var AnonymousSFC = (_temp2 = _class = function (_Taro$Component) {
       this.anonymousFunc3 = function () {
         return _taroWeapp2.default.setClipboardData({
           // 复制文本api
-          data: "" + 123,
+          data: "https://mall.jd.com/index-1000416021.html",
           success: function success(res) {
             _taroWeapp2.default.getClipboardData({
               success: function success(res) {

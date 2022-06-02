@@ -91,4 +91,11 @@ export const isId = (card: string) => {
   const reg = /(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/
   return reg.test(card)
 }
+export const enlarge = (url) => {
+  //图片预览
+  Taro.previewImage({
+    current: url, // 当前显示图片的http链接
+    urls: [url]
+  })
+}
 

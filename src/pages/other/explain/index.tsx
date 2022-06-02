@@ -33,7 +33,7 @@ const Index: FC = () => {
 
   return (
     <View className={styles.explain_page}>
-      <Video poster={imgUrl} src={videoUrl} />
+      <Video poster={imgUrl || ''} src={videoUrl} />
       <View
         className={styles.sadd_action}
         onClick={() => {

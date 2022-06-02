@@ -2,70 +2,75 @@
     <view class="{{styles.upload_page}}">
         <view style="{{anonymousState__temp}}">
             <view class="{{styles.scan}}">
-                <view class="{{styles.key_left}}"><text class="{{styles.required}}">*</text>检测卡二维码</view>
-                <view class="{{styles.value_right}}" bindtap="anonymousFunc0">
-                    <view class="{{styles.place}}" style="{{anonymousState__temp2}}">
-                        <block>
-                            <block wx:if="{{resultInfo.reagentCode}}"><text class="{{styles.serial}}">{{resultInfo.reagentCode}}</text>
-                            </block>
-                            <block wx:else><text>请扫描</text>
-                            </block>
-                        </block>
+                <view class="{{styles.key_left}}"><text class="{{styles.required}}">*</text>受检人<text style="{{anonymousState__temp2}}">的名字</text>
+                </view>
+                <view class="{{styles.value_right}}">
+                    <view class="{{styles.place}}" style="{{anonymousState__temp3}}">
+                        <input value="{{resultInfo.userName || userName}}" disabled="{{true}}" />
                     </view>
-                    <image src="{{anonymousState__temp3}}"></image>
+                    <image src="{{anonymousState__temp4}}" style="{{anonymousState__temp5}}"></image>
+                </view>
+            </view>
+            <view class="{{styles.scan}}">
+                <view class="{{styles.key_left}}"><text class="{{styles.required}}">*</text>检测卡二维码</view>
+                <view class="{{styles.value_right}}">
+                    <view class="{{styles.place}}" style="{{anonymousState__temp6}}">
+                        <input placeholder="扫描/输入" value="{{resultInfo.reagentCode}}" bindinput="anonymousFunc0" />
+                    </view>
+                    <image src="{{anonymousState__temp7}}" bindtap="anonymousFunc1"></image>
                 </view>
             </view>
             <view class="{{styles.process_title}}"><text>*</text>过程记录</view>
             <view>
                 <view class="{{styles.img_title}}">{{' '}}<text></text> 上传拭子图片</view>
                 <view class="{{styles.img_upload}}">
-                    <image src="{{anonymousState__temp4}}" bindtap="anonymousFunc1"></image>
-                    <image src="{{anonymousState__temp5}}"></image>
+                    <image src="{{anonymousState__temp8}}" bindtap="anonymousFunc2"></image>
+                    <image src="{{anonymousState__temp9}}"></image>
                 </view>
                 <view class="{{styles.img_title}}">{{' '}}<text></text>上传样本提取液图片</view>
                 <view class="{{styles.img_upload}}">
-                    <image src="{{anonymousState__temp6}}" bindtap="anonymousFunc2"></image>
-                    <image src="{{anonymousState__temp7}}"></image>
+                    <image src="{{anonymousState__temp10}}" bindtap="anonymousFunc3"></image>
+                    <image src="{{anonymousState__temp11}}"></image>
                 </view>
                 <view class="{{styles.img_title}}">{{' '}}<text></text>上传试剂卡图片</view>
                 <view class="{{styles.img_upload}}">
-                    <image src="{{anonymousState__temp8}}" bindtap="anonymousFunc3"></image>
-                    <image src="{{anonymousState__temp9}}"></image>
+                    <image src="{{anonymousState__temp12}}" bindtap="anonymousFunc4"></image>
+                    <image src="{{anonymousState__temp13}}"></image>
                 </view>
             </view>
             <view class="{{styles.wait}}">等待15分钟检测完成后上传检测结果</view>
         </view>
-        <view style="{{anonymousState__temp10}}">
+        <view style="{{anonymousState__temp14}}">
             <view>
                 <view class="{{styles.process_title}}"><text>*</text>检测结果</view>
                 <view class="{{styles.img_choose}}">
-                    <view class="{{styles.result_box}}" bindtap="anonymousFunc4">
-                        <image src="{{anonymousState__temp11}}">
+                    <view class="{{styles.result_box}}" bindtap="anonymousFunc5">
+                        <image src="{{anonymousState__temp15}}">
                             <view>
-                                <image src="{{anonymousState__temp12}}"></image>{{' '}}阴性</view>
+                                <image src="{{anonymousState__temp16}}"></image>{{' '}}阴性</view>
                         </image>
                     </view>
-                    <view class="{{styles.result_box}}" bindtap="anonymousFunc5">
-                        <image src="{{anonymousState__temp13}}"></image>
-                        <view>
-                            <image src="{{anonymousState__temp14}}"></image>阳性</view>
-                    </view>
                     <view class="{{styles.result_box}}" bindtap="anonymousFunc6">
-                        <image src="{{anonymousState__temp15}}" style="{{anonymousState__temp16}}"></image>
+                        <image src="{{anonymousState__temp17}}"></image>
                         <view>
-                            <image src="{{anonymousState__temp17}}"></image>无效</view>
+                            <image src="{{anonymousState__temp18}}"></image>阳性</view>
+                    </view>
+                    <view class="{{styles.result_box}}" bindtap="anonymousFunc7">
+                        <image src="{{anonymousState__temp19}}" style="{{anonymousState__temp20}}"></image>
+                        <view>
+                            <image src="{{anonymousState__temp21}}"></image>无效</view>
                     </view>
                 </view>
                 <view class="{{styles.img_title}}">{{' '}}<text></text> 上传结果照片</view>
                 <view class="{{styles.img_upload}}">
-                    <image src="{{anonymousState__temp18}}" bindtap="anonymousFunc7"></image>
-                    <image src="{{anonymousState__temp19}}"></image>
+                    <image src="{{anonymousState__temp22}}" bindtap="anonymousFunc8"></image>
+                    <image src="{{anonymousState__temp23}}"></image>
                 </view>
             </view>
-            <view class="{{styles.read}}" bindtap="anonymousFunc8">
-                <image src="{{anonymousState__temp20}}"></image>我已阅读并同意<text>《免责声明》</text>
+            <view class="{{styles.read}}" bindtap="anonymousFunc9">
+                <image src="{{anonymousState__temp24}}"></image>我已阅读并同意<text>《免责声明》</text>
             </view>
-            <view class="{{styles.btn}}" bindtap="anonymousFunc9">提交</view>
+            <view class="{{styles.btn}}" bindtap="anonymousFunc10">提交</view>
             <block wx:if="{{isNewIphone}}">
                 <view class="spacingIphone"></view>
             </block>

@@ -77,7 +77,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '结果上传',
       navigationBarBackgroundColor: '#fff'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "anonymousState__temp15", "anonymousState__temp16", "anonymousState__temp17", "anonymousState__temp18", "anonymousState__temp19", "anonymousState__temp20", "styles", "resultInfo", "isNewIphone"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "anonymousState__temp15", "anonymousState__temp16", "anonymousState__temp17", "anonymousState__temp18", "anonymousState__temp19", "anonymousState__temp20", "anonymousState__temp21", "anonymousState__temp22", "anonymousState__temp23", "anonymousState__temp24", "styles", "resultInfo", "userName", "isNewIphone"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -98,7 +98,9 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var id = (0, _taroWeapp.useRouter)().params.id;
+      var _useRouter$params = (0, _taroWeapp.useRouter)().params,
+          id = _useRouter$params.id,
+          userName = _useRouter$params.userName;
 
       var _useState = (0, _taroWeapp.useState)(false),
           _useState2 = _slicedToArray(_useState, 2),
@@ -152,7 +154,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
                   return _context.abrupt("return", _index2.toast.info('请上传试剂卡图片'));
 
                 case 9:
-                  if (resultType) {
+                  if (!(!resultType && resultType != 0)) {
                     _context.next = 11;
                     break;
                   }
@@ -209,7 +211,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           setResultInfo(_extends({}, JSON.parse(archive)));
         } else {
           setResultInfo({
-            cuserId: id
+            cuserId: id,
+            userName: userName
           });
         }
       }, []);
@@ -296,8 +299,25 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         padding: 'calc(20 * 100vw / 375)',
         paddingBottom: 'calc(15 * 100vw / 375)'
       });
+      var anonymousState__temp2 = (0, _taroWeapp.internal_inline_style)({ opacity: 0 });
+      var anonymousState__temp3 = (0, _taroWeapp.internal_inline_style)({ color: '#000' });
 
-      this.anonymousFunc0 = function () {
+      var anonymousState__temp4 = __webpack_require__(/*! ./img/img_scan.png */ "./src/pages/other/uploadResult/img/img_scan.png");
+
+      var anonymousState__temp5 = (0, _taroWeapp.internal_inline_style)({ opacity: 0 });
+      var anonymousState__temp6 = (0, _taroWeapp.internal_inline_style)({ color: resultInfo.reagentCode ? '#000' : '#ccc' });
+
+      this.anonymousFunc0 = function (e) {
+        return setResultInfo(function (info) {
+          return _extends({}, info, {
+            reagentCode: e.detail.value
+          });
+        });
+      };
+
+      var anonymousState__temp7 = __webpack_require__(/*! ./img/img_scan.png */ "./src/pages/other/uploadResult/img/img_scan.png");
+
+      this.anonymousFunc1 = function () {
         _taroWeapp2.default.scanCode({
           success: function success(res) {
             _taroWeapp2.default.showLoading({ title: '识别中...' });
@@ -315,42 +335,38 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var anonymousState__temp2 = (0, _taroWeapp.internal_inline_style)({ color: resultInfo.reagentCode ? '#000' : '#ccc' });
+      var anonymousState__temp8 = resultInfo.shiziUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
 
-      var anonymousState__temp3 = __webpack_require__(/*! ./img/img_scan.png */ "./src/pages/other/uploadResult/img/img_scan.png");
-
-      var anonymousState__temp4 = resultInfo.shiziUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
-
-      this.anonymousFunc1 = function () {
+      this.anonymousFunc2 = function () {
         return onUploadClick(5);
       };
 
-      var anonymousState__temp5 = __webpack_require__(/*! ./img/img_11.png */ "./src/pages/other/uploadResult/img/img_11.png");
+      var anonymousState__temp9 = __webpack_require__(/*! ./img/img_11.png */ "./src/pages/other/uploadResult/img/img_11.png");
 
-      var anonymousState__temp6 = resultInfo.yangbenUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
+      var anonymousState__temp10 = resultInfo.yangbenUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
 
-      this.anonymousFunc2 = function () {
+      this.anonymousFunc3 = function () {
         return onUploadClick(7);
       };
 
-      var anonymousState__temp7 = __webpack_require__(/*! ./img/img_22.png */ "./src/pages/other/uploadResult/img/img_22.png");
+      var anonymousState__temp11 = __webpack_require__(/*! ./img/img_22.png */ "./src/pages/other/uploadResult/img/img_22.png");
 
-      var anonymousState__temp8 = resultInfo.shijikaUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
+      var anonymousState__temp12 = resultInfo.shijikaUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
 
-      this.anonymousFunc3 = function () {
+      this.anonymousFunc4 = function () {
         return onUploadClick(6);
       };
 
-      var anonymousState__temp9 = __webpack_require__(/*! ./img/img_33.png */ "./src/pages/other/uploadResult/img/img_33.png");
+      var anonymousState__temp13 = __webpack_require__(/*! ./img/img_33.png */ "./src/pages/other/uploadResult/img/img_33.png");
 
-      var anonymousState__temp10 = (0, _taroWeapp.internal_inline_style)({
+      var anonymousState__temp14 = (0, _taroWeapp.internal_inline_style)({
         marginTop: 'calc(8 * 100vw / 375)',
         background: '#fff',
         padding: 'calc(20 * 100vw / 375)',
         paddingTop: 'calc(15 * 100vw / 375)'
       });
 
-      this.anonymousFunc4 = function () {
+      this.anonymousFunc5 = function () {
         return setResultInfo(function (info) {
           return _extends({}, info, {
             resultType: 1
@@ -358,11 +374,11 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var anonymousState__temp11 = __webpack_require__(/*! ./img/img_1.png */ "./src/pages/other/uploadResult/img/img_1.png");
+      var anonymousState__temp15 = __webpack_require__(/*! ./img/img_1.png */ "./src/pages/other/uploadResult/img/img_1.png");
 
-      var anonymousState__temp12 = resultInfo.resultType === 1 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
+      var anonymousState__temp16 = resultInfo.resultType === 1 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
 
-      this.anonymousFunc5 = function () {
+      this.anonymousFunc6 = function () {
         return setResultInfo(function (info) {
           return _extends({}, info, {
             resultType: 2
@@ -370,11 +386,11 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var anonymousState__temp13 = __webpack_require__(/*! ./img/img_2.png */ "./src/pages/other/uploadResult/img/img_2.png");
+      var anonymousState__temp17 = __webpack_require__(/*! ./img/img_2.png */ "./src/pages/other/uploadResult/img/img_2.png");
 
-      var anonymousState__temp14 = resultInfo.resultType === 2 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
+      var anonymousState__temp18 = resultInfo.resultType === 2 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
 
-      this.anonymousFunc6 = function () {
+      this.anonymousFunc7 = function () {
         return setResultInfo(function (info) {
           return _extends({}, info, {
             resultType: 0
@@ -382,26 +398,26 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var anonymousState__temp15 = __webpack_require__(/*! ./img/img_3.png */ "./src/pages/other/uploadResult/img/img_3.png");
+      var anonymousState__temp19 = __webpack_require__(/*! ./img/img_3.png */ "./src/pages/other/uploadResult/img/img_3.png");
 
-      var anonymousState__temp16 = (0, _taroWeapp.internal_inline_style)({ marginRight: 0 });
-      var anonymousState__temp17 = resultInfo.resultType === 0 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
+      var anonymousState__temp20 = (0, _taroWeapp.internal_inline_style)({ marginRight: 0 });
+      var anonymousState__temp21 = resultInfo.resultType === 0 ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
 
-      var anonymousState__temp18 = resultInfo.resultUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
+      var anonymousState__temp22 = resultInfo.resultUrl || __webpack_require__(/*! ./img/img_camera.png */ "./src/pages/other/uploadResult/img/img_camera.png");
 
-      this.anonymousFunc7 = function () {
+      this.anonymousFunc8 = function () {
         return onUploadClick(8);
       };
 
-      var anonymousState__temp19 = __webpack_require__(/*! ./img/img_33.png */ "./src/pages/other/uploadResult/img/img_33.png");
+      var anonymousState__temp23 = __webpack_require__(/*! ./img/img_33.png */ "./src/pages/other/uploadResult/img/img_33.png");
 
-      this.anonymousFunc8 = function () {
+      this.anonymousFunc9 = function () {
         return setIsRead(true);
       };
 
-      var anonymousState__temp20 = isRead ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
+      var anonymousState__temp24 = isRead ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
 
-      this.anonymousFunc9 = function () {
+      this.anonymousFunc10 = function () {
         if (!(0, _index2.requestOnOff)()) {
           return;
         }if (isRead) {
@@ -432,8 +448,13 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp18: anonymousState__temp18,
         anonymousState__temp19: anonymousState__temp19,
         anonymousState__temp20: anonymousState__temp20,
+        anonymousState__temp21: anonymousState__temp21,
+        anonymousState__temp22: anonymousState__temp22,
+        anonymousState__temp23: anonymousState__temp23,
+        anonymousState__temp24: anonymousState__temp24,
         styles: styles,
         resultInfo: resultInfo,
+        userName: userName,
         isNewIphone: _index.isNewIphone
       });
       return this.__state;
@@ -488,10 +509,15 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     value: function anonymousFunc9(e) {
       ;
     }
+  }, {
+    key: "anonymousFunc10",
+    value: function anonymousFunc10(e) {
+      ;
+    }
   }]);
 
   return Index;
-}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9", "anonymousFunc10"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
 
 
 Index.config = { navigationBarTitleText: '结果上传', navigationBarBackgroundColor: '#fff' };

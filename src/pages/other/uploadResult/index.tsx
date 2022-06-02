@@ -1,26 +1,21 @@
 /**
  * @description 上传结果
  */
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text, Image, Input } from '@tarojs/components'
 import Taro, { useEffect, FC, useState, useRouter } from '@tarojs/taro'
 import { isNewIphone } from '~/modules/@wmeimob/taro-design/src/components/utils'
 import * as styles from './index.module.less'
 import { observer } from '@tarojs/mobx'
-import { toast, requestOnOff, sleep } from '~/components/utils'
+import { toast, requestOnOff, sleep, enlarge } from '~/components/utils'
 import { apiUrl } from '~/config'
 import { post } from '~/components/request'
 
 const Index: FC = () => {
-  const { id } = useRouter().params
+  const { id, userName } = useRouter().params
   const [isRead, setIsRead] = useState(false)
-  const [resultInfo, setResultInfo] = useState<any>({
-   
-  })
+  const [resultInfo, setResultInfo] = useState<any>({})
 
   const submit = async () => {
-    
-
-
     const {
       checkResultPicFleId,
       resultType,
@@ -28,24 +23,24 @@ const Index: FC = () => {
       shiziPicFileId,
       yangbenPicFileId,
       reagentCode,
-      cuserId
+      cuserId,
     } = resultInfo
-    if(!reagentCode) {
+    if (!reagentCode) {
       return toast.info('请扫描检测卡二维码')
     }
-    if(!shiziPicFileId) {
+    if (!shiziPicFileId) {
       return toast.info('请上传拭子图片')
     }
-    if(!yangbenPicFileId) {
+    if (!yangbenPicFileId) {
       return toast.info('请上传样本提取液图片')
     }
-    if(!shijikaPicFileId) {
+    if (!shijikaPicFileId) {
       return toast.info('请上传试剂卡图片')
     }
-    if(!resultType) {
+    if (!resultType && resultType != 0) {
       return toast.info('请选择检测结果')
     }
-    if(!checkResultPicFleId) {
+    if (!checkResultPicFleId) {
       return toast.info('请上传结果图片')
     }
 
@@ -59,7 +54,7 @@ const Index: FC = () => {
       yangbenPicFileId,
       cuserId,
     })
-    if(data.code === 200) {
+    if (data.code === 200) {
       toast.success('操作成功')
       sleep(600, () => Taro.navigateBack())
     }
@@ -73,7 +68,8 @@ const Index: FC = () => {
       })
     } else {
       setResultInfo({
-        cuserId: id
+        cuserId: id,
+        userName,
       })
     }
   }, [])
@@ -81,7 +77,7 @@ const Index: FC = () => {
   const onUploadClick = (type) => {
     Taro.chooseImage({
       count: 1,
-      sourceType:['camera'],
+      sourceType: ['camera'],
       success: (src) => {
         const tempFilePaths = src.tempFilePaths
         var tempFilesSize = src.tempFiles[0].size
@@ -167,30 +163,54 @@ const Index: FC = () => {
         <View className={styles.scan}>
           <View className={styles.key_left}>
             <Text className={styles.required}>*</Text>
+            受检人<Text style={{opacity: 0}}>的名字</Text>
+          </View>
+          <View className={styles.value_right}>
+            <View className={styles.place} style={{ color: '#000' }}>
+              <Input value={resultInfo.userName || userName} disabled/>
+            </View>
+            <Image src={require('./img/img_scan.png')} style={{ opacity: 0 }} />
+          </View>
+        </View>
+
+        <View className={styles.scan}>
+          <View className={styles.key_left}>
+            <Text className={styles.required}>*</Text>
             检测卡二维码
           </View>
-          <View className={styles.value_right}
-            onClick={() =>{
-              Taro.scanCode({
-                success: (res: any) => {
-                  Taro.showLoading({ title: '识别中...' })
-                  setResultInfo(info => ({
-                    ...info, 
-                    reagentCode: res.result
+          <View className={styles.value_right}>
+            <View
+              className={styles.place}
+              style={{ color: resultInfo.reagentCode ? '#000' : '#ccc' }}
+            >
+              <Input
+                placeholder="扫描/输入"
+                value={resultInfo.reagentCode}
+                onInput={(e) =>
+                  setResultInfo((info) => ({
+                    ...info,
+                    reagentCode: e.detail.value,
                   }))
-                },
-                complete: () => {
-                  sleep(200, () => Taro.hideLoading())
                 }
-              })
-            }}
-          >
-            <View className={styles.place} style={{color: resultInfo.reagentCode ? '#000' : '#ccc'}}>
-              {
-                resultInfo.reagentCode ? <Text className={styles.serial}>{resultInfo.reagentCode}</Text> : <Text>请扫描</Text>
-              }
-              </View>
-            <Image src={require('./img/img_scan.png')} />
+              />
+            </View>
+            <Image
+              src={require('./img/img_scan.png')}
+              onClick={() => {
+                Taro.scanCode({
+                  success: (res: any) => {
+                    Taro.showLoading({ title: '识别中...' })
+                    setResultInfo((info) => ({
+                      ...info,
+                      reagentCode: res.result,
+                    }))
+                  },
+                  complete: () => {
+                    sleep(200, () => Taro.hideLoading())
+                  },
+                })
+              }}
+            />
           </View>
         </View>
 

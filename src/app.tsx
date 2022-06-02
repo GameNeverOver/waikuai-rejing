@@ -82,7 +82,7 @@ class App extends Component {
       image: styles.home,
       imageSelected: styles.home_select,
       'url': '/pages/home/index',
-      'text': '首页'
+      'text': '热景自测'
     }, {
       image: styles.mine,
       imageSelected: styles.mine_select,

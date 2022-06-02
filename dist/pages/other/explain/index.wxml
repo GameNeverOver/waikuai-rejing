@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.explain_page}}">
-        <video poster="{{imgUrl}}" src="{{videoUrl}}"></video>
+        <video poster="{{imgUrl || ''}}" src="{{videoUrl}}"></video>
         <view class="{{styles.sadd_action}}" bindtap="anonymousFunc0">
             <view style="{{anonymousState__temp}}">
                 <image src="{{anonymousState__temp2}}" class="{{styles.add_img}}"></image>

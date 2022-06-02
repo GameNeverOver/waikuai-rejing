@@ -52,7 +52,7 @@ export default ({ onClose }: IProps) => {
             onClick={() =>
               Taro.setClipboardData({
                 // 复制文本api
-                data: `${123}`,
+                data: `https://mall.jd.com/index-1000416021.html`,
                 success: (res) => {
                   Taro.getClipboardData({
                     success: (res) => toast.info('已复制'),

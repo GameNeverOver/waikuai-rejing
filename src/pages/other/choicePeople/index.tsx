@@ -69,9 +69,10 @@ const Index: FC = () => {
             onClick={() => {
               const archive = Taro.getStorageSync('archive')
               if (archive) {
+                const info = JSON.parse(archive)
                 Taro.showModal({
                   title: '提示',
-                  content: `您有尚未结束的任务，是否继续进行？`,
+                  content: `受检人 '${info.userName}' 有未结束的检测任务，是否继续进行？`,
                   success(res) {
                     if (!res.cancel) {
                       Taro.navigateTo({
@@ -80,7 +81,7 @@ const Index: FC = () => {
                     } else {
                       Taro.setStorageSync('archive', '')
                       Taro.navigateTo({
-                        url: '/pages/other/uploadResult/index?id=' + ele.id,
+                        url: '/pages/other/uploadResult/index?id=' + ele.id +'&userName=' + ele.userName,
                       })
                     }
                   },
