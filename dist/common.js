@@ -334,7 +334,7 @@ module.exports = {"tabBarFontColor":"#cccccc","primaryColor":"#1890ff","iconSize
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.enlarge = exports.isId = exports.isMobile = exports.toast = exports.getUserInfo = undefined;
+exports.enlarge = exports.sampleImg = exports.isId = exports.isMobile = exports.isScan = exports.toast = exports.getUserInfo = undefined;
 
 var _regenerator = __webpack_require__(/*! babel-runtime/regenerator */ "./node_modules/babel-runtime/regenerator/index.js");
 
@@ -463,6 +463,10 @@ var toast = exports.toast = {
     _taroWeapp2.default.hideToast();
   }
 };
+var isScan = exports.isScan = function isScan(str) {
+  var reg = /^[0-9a-zA-Z]*$/g;
+  return reg.test(str);
+};
 var isMobile = exports.isMobile = function isMobile(str) {
   var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
   return reg.test(str);
@@ -472,11 +476,12 @@ var isId = exports.isId = function isId(card) {
   var reg = /(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/;
   return reg.test(card);
 };
-var enlarge = exports.enlarge = function enlarge(url) {
+var sampleImg = exports.sampleImg = ['https://covid-check-examples.oss-cn-beijing.aliyuncs.com/shizi2.jpg', 'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/yangben.jpg', 'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/shizhi1.jpg', 'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/result.jpg'];
+var enlarge = exports.enlarge = function enlarge(url, urls) {
   //图片预览
   _taroWeapp2.default.previewImage({
     current: url,
-    urls: [url]
+    urls: urls || sampleImg
   });
 };
 

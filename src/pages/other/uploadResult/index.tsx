@@ -5,8 +5,9 @@ import { View, Text, Image, Input } from '@tarojs/components'
 import Taro, { useEffect, FC, useState, useRouter } from '@tarojs/taro'
 import { isNewIphone } from '~/modules/@wmeimob/taro-design/src/components/utils'
 import * as styles from './index.module.less'
+import { getResizeUrl } from '~/modules/@wmeimob/aliyun';
 import { observer } from '@tarojs/mobx'
-import { toast, requestOnOff, sleep, enlarge } from '~/components/utils'
+import { toast, requestOnOff, sleep, enlarge, sampleImg, isScan } from '~/components/utils'
 import { apiUrl } from '~/config'
 import { post } from '~/components/request'
 
@@ -26,7 +27,10 @@ const Index: FC = () => {
       cuserId,
     } = resultInfo
     if (!reagentCode) {
-      return toast.info('请扫描检测卡二维码')
+      return toast.info('请扫描检测卡二维码或输入检测卡编码')
+    }
+    if(!isScan(reagentCode)){
+      return toast.info('请输入正确的检测编号')
     }
     if (!shiziPicFileId) {
       return toast.info('请上传拭子图片')
@@ -189,7 +193,7 @@ const Index: FC = () => {
                 onInput={(e) =>
                   setResultInfo((info) => ({
                     ...info,
-                    reagentCode: e.detail.value,
+                    reagentCode: e.detail.value.trim(),
                   }))
                 }
               />
@@ -228,7 +232,10 @@ const Index: FC = () => {
               src={resultInfo.shiziUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(5)}
             />
-            <Image src={require('./img/img_11.png')} />
+            <Image src={sampleImg[0] + getResizeUrl({ width: 80, height: 120 })} onClick={() => enlarge(sampleImg[0])}>
+            <Text>示例</Text>
+
+            </Image>
           </View>
 
           <View className={styles.img_title}>
@@ -241,7 +248,9 @@ const Index: FC = () => {
               src={resultInfo.yangbenUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(7)}
             />
-            <Image src={require('./img/img_22.png')} />
+            <Image src={sampleImg[1] + getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[1])}>
+            <Text>示例</Text>
+            </Image>
           </View>
 
           <View className={styles.img_title}>
@@ -254,7 +263,9 @@ const Index: FC = () => {
               src={resultInfo.shijikaUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(6)}
             />
-            <Image src={require('./img/img_33.png')} />
+            <Image src={sampleImg[2] + getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[2])}>
+              <Text>示例</Text>
+            </Image>
           </View>
         </View>
         <View className={styles.wait}>等待15分钟检测完成后上传检测结果</View>
@@ -351,7 +362,9 @@ const Index: FC = () => {
               src={resultInfo.resultUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(8)}
             />
-            <Image src={require('./img/img_33.png')} />
+            <Image src={sampleImg[3]+ getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[3])}>
+            <Text>示例</Text>
+            </Image>
           </View>
         </View>
         <View className={styles.read} onClick={() => setIsRead(true)}>

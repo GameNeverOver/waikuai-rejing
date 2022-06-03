@@ -81,6 +81,12 @@ export const toast = {
   }
 };
 
+
+export const isScan = (str) => {
+  const reg = /^[0-9a-zA-Z]*$/g;
+  return reg.test(str);
+}
+
 export const isMobile = (str) => {
   const reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
   return reg.test(str);
@@ -91,11 +97,18 @@ export const isId = (card: string) => {
   const reg = /(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/
   return reg.test(card)
 }
-export const enlarge = (url) => {
+
+export const sampleImg = [
+  'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/shizi2.jpg',
+  'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/yangben.jpg',
+  'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/shizhi1.jpg',
+  'https://covid-check-examples.oss-cn-beijing.aliyuncs.com/result.jpg'
+]
+export const enlarge = (url, urls?) => {
   //图片预览
   Taro.previewImage({
     current: url, // 当前显示图片的http链接
-    urls: [url]
+    urls: urls || sampleImg
   })
 }
 

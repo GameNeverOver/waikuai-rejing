@@ -68,8 +68,8 @@ const Index: FC = () => {
             key={ele.id}
             onClick={() => {
               const archive = Taro.getStorageSync('archive')
-              if (archive) {
-                const info = JSON.parse(archive)
+              const info = JSON.parse(archive || "{}")
+              if (archive && info.userName) {
                 Taro.showModal({
                   title: '提示',
                   content: `受检人 '${info.userName}' 有未结束的检测任务，是否继续进行？`,
