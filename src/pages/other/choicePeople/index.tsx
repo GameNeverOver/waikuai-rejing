@@ -89,7 +89,7 @@ const Index: FC = () => {
               } else {
                 Taro.setStorageSync('archive', '')
                 Taro.navigateTo({
-                  url: '/pages/other/uploadResult/index?id=' + ele.id,
+                  url: '/pages/other/uploadResult/index?id=' + ele.id+'&userName=' + ele.userName,
                 })
               }
             }}
