@@ -77,7 +77,10 @@ const Index: FC = () => {
       <MMNavigation type={MMNavigationType.Transparent} title="受检人" />
       <View
         className={styles.sadd_action}
-        onClick={() => Taro.navigateTo({ url: '/pages/other/addPeople/index' })}
+        onClick={() => {
+          setFirst(true)
+          Taro.navigateTo({ url: '/pages/other/addPeople/index' })
+        }}
       >
         <View style={{ display: 'flex', alignItems: 'center' }}>
           <Image src={require('./img/add.png')} className={styles.add_img} />

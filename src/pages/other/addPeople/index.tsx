@@ -154,7 +154,7 @@ const Index: FC = () => {
             maxLength={11}
             placeholder="请输入"
             placeholderStyle="color: #CCCCCC;"
-            type="digit"
+            type="number"
             value={content.mobileNo || ''}
             onInput={(e) => setVal('mobileNo', e.detail.value)}
           />

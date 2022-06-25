@@ -238,7 +238,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       }();
 
       this.anonymousFunc0 = function () {
-        return _taroWeapp2.default.navigateTo({ url: '/pages/other/addPeople/index' });
+        setFirst(true);
+        _taroWeapp2.default.navigateTo({ url: '/pages/other/addPeople/index' });
       };
 
       var anonymousState__temp = (0, _taroWeapp.internal_inline_style)({ display: 'flex', alignItems: 'center' });

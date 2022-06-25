@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.my_page}}">
-        <mm-navigation compid="{{$compid__12}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__25}}"></mm-navigation>
         <image src="{{anonymousState__temp}}" class="{{styles.bg}}"></image>
         <view class="{{styles.head}}">
             <image src="{{anonymousState__temp2}}"></image><text>{{userInfo.nickname || ''}}</text>

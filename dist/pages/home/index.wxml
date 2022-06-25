@@ -1,6 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.my_page}}">
-        <mm-navigation compid="{{$compid__48}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__28}}"></mm-navigation>
+        <view class="{{styles.bgTip}}">新冠抗原检测数据记录平台</view>
         <image src="{{anonymousState__temp}}" class="{{styles.banner}}"></image>
         <view class="{{styles.handle_menu}}">
             <view class="{{styles.handle_option}}" bindtap="anonymousFunc0">
@@ -33,7 +34,7 @@
             </view>
         </view>
         <block wx:if="{{visible}}">
-            <channel compid="{{$compid__49}}"></channel>
+            <channel compid="{{$compid__29}}"></channel>
         </block>
     </view>
 </block>

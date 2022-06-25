@@ -1646,7 +1646,7 @@ function enumKeys(obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"my_page":"index-module__my_page___txTgo","banner":"index-module__banner___G4VUx","handle_menu":"index-module__handle_menu___20_kY","handle_option":"index-module__handle_option___1jCh7","add_img":"index-module__add_img___2nGau","img_right":"index-module__img_right___2kE3j","modal":"index-module__modal___1UUIN","show_link":"index-module__show_link___9M6wB","title":"index-module__title___2mxTG","spacingIphone":"index-module__spacingIphone___3fKqq","link_item":"index-module__link_item___3aPIJ"};
+module.exports = {"my_page":"index-module__my_page___txTgo","bgTip":"index-module__bgTip___165Uy","banner":"index-module__banner___G4VUx","handle_menu":"index-module__handle_menu___20_kY","handle_option":"index-module__handle_option___1jCh7","add_img":"index-module__add_img___2nGau","img_right":"index-module__img_right___2kE3j","modal":"index-module__modal___1UUIN","show_link":"index-module__show_link___9M6wB","title":"index-module__title___2mxTG","spacingIphone":"index-module__spacingIphone___3fKqq","link_item":"index-module__link_item___3aPIJ"};
 
 /***/ }),
 

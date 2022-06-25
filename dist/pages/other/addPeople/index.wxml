@@ -19,7 +19,7 @@
             </view>
             <view class="{{styles.record}}"><text style="{{anonymousState__temp6}}">*</text>
                 <view class="{{styles.field}}">{{'手机号'}}</view>
-                <input maxlength="{{11}}" placeholder="请输入" placeholder-style="color: #CCCCCC;" type="digit" value="{{content.mobileNo || ''}}" bindinput="anonymousFunc3" />
+                <input maxlength="{{11}}" placeholder="请输入" placeholder-style="color: #CCCCCC;" type="number" value="{{content.mobileNo || ''}}" bindinput="anonymousFunc3" />
             </view>
             <view class="{{styles.record}}"><text style="{{anonymousState__temp7}}">*</text>
                 <view class="{{styles.field}}">{{'居住地'}}</view>
