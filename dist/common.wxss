@@ -114,13 +114,6 @@
   position: relative;
   padding-bottom: 70px;
 }
-.index-module__my_page___txTgo .index-module__bgTip___165Uy {
-  text-align: center;
-  font-size: 14px;
-  top: 0;
-  color: #eee;
-  z-index: 999;
-}
 .index-module__my_page___txTgo .index-module__banner___G4VUx {
   width: 100vw;
   height: calc(297 * 100vw / 375);

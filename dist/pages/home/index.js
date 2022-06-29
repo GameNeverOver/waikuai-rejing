@@ -78,7 +78,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '首页',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "$compid__28", "$compid__29", "styles", "visible"], _this.customComponents = ["MMNavigation", "Channel"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "$compid__10", "$compid__11", "styles", "visible"], _this.customComponents = ["MMNavigation", "Channel"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -99,15 +99,15 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__28"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__28 = _genCompid2[0],
-          $compid__28 = _genCompid2[1];
+          $prevCompid__10 = _genCompid2[0],
+          $compid__10 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__29"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__29 = _genCompid4[0],
-          $compid__29 = _genCompid4[1];
+          $prevCompid__11 = _genCompid4[0],
+          $compid__11 = _genCompid4[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           userInfo = _useContext.userInfo;
@@ -221,10 +221,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": "\u70ED\u666F\u751F\u7269"
-      }, $compid__28, $prevCompid__28);
+      }, $compid__10, $prevCompid__10);
       visible && _taroWeapp.propsManager.set({
         "onClose": this.anonymousFunc4
-      }, $compid__29, $prevCompid__29);
+      }, $compid__11, $prevCompid__11);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -239,8 +239,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp11: anonymousState__temp11,
         anonymousState__temp12: anonymousState__temp12,
         anonymousState__temp13: anonymousState__temp13,
-        $compid__28: $compid__28,
-        $compid__29: $compid__29,
+        $compid__10: $compid__10,
+        $compid__11: $compid__11,
         styles: styles,
         visible: visible
       });

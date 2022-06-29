@@ -446,10 +446,36 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       this.anonymousFunc14 = function () {
         if (!(0, _index3.requestOnOff)()) {
           return;
+        }_taroWeapp2.default.showLoading({ title: '加载中...' });
+        _taroWeapp2.default.downloadFile({
+          // 示例 url，并非真实存在
+          url: 'https://covid-user-agreement.oss-cn-beijing.aliyuncs.com/user-agreement.pdf',
+          success: function success(res) {
+            var filePath = res.tempFilePath;
+            _taroWeapp2.default.openDocument({
+              filePath: filePath,
+              success: function success(res) {
+                console.log('打开文档成功');
+                _taroWeapp2.default.hideLoading();
+              }
+            });
+          },
+          fail: function fail() {
+            return _taroWeapp2.default.hideLoading();
+          },
+          complete: function complete() {
+            return _taroWeapp2.default.hideLoading();
+          }
+        });
+      };
+
+      this.anonymousFunc15 = function () {
+        if (!(0, _index3.requestOnOff)()) {
+          return;
         }if (isRead) {
           submit();
         } else {
-          _index3.toast.info('请确保您已阅读免责声明');
+          _index3.toast.info('请确保您已阅读用户服务协议');
         }
       };
 
@@ -560,10 +586,15 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     value: function anonymousFunc14(e) {
       ;
     }
+  }, {
+    key: "anonymousFunc15",
+    value: function anonymousFunc15(e) {
+      ;
+    }
   }]);
 
   return Index;
-}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9", "anonymousFunc10", "anonymousFunc11", "anonymousFunc12", "anonymousFunc13", "anonymousFunc14"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9", "anonymousFunc10", "anonymousFunc11", "anonymousFunc12", "anonymousFunc13", "anonymousFunc14", "anonymousFunc15"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
 
 
 Index.config = { navigationBarTitleText: '结果上传', navigationBarBackgroundColor: '#fff' };

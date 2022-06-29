@@ -72,7 +72,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "$compid__25", "styles", "userInfo"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "$compid__12", "styles", "userInfo"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -91,10 +91,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__25"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__25 = _genCompid2[0],
-          $compid__25 = _genCompid2[1];
+          $prevCompid__12 = _genCompid2[0],
+          $compid__12 = _genCompid2[1];
 
       var _useContext = (0, _taroWeapp.useContext)(_globalStore2.default),
           setUserInfo = _useContext.setUserInfo,
@@ -137,7 +137,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": ""
-      }, $compid__25, $prevCompid__25);
+      }, $compid__12, $prevCompid__12);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -145,7 +145,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp4: anonymousState__temp4,
         anonymousState__temp5: anonymousState__temp5,
         anonymousState__temp6: anonymousState__temp6,
-        $compid__25: $compid__25,
+        $compid__12: $compid__12,
         styles: styles,
         userInfo: userInfo
       });

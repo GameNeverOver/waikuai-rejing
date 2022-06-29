@@ -40,7 +40,6 @@ const Index: FC = () => {
   return (
     <View className={styles.my_page}>
       <MMNavigation type={MMNavigationType.Transparent} title="热景生物" />
-      <View className={styles.bgTip}>新冠抗原检测数据记录平台</View>
 
       <Image src={require('./images/homeBg.png')} className={styles.banner} />
       <View className={styles.handle_menu}>

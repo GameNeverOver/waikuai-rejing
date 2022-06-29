@@ -5,9 +5,16 @@ import { View, Text, Image, Input } from '@tarojs/components'
 import Taro, { useEffect, FC, useState, useRouter } from '@tarojs/taro'
 import { isNewIphone } from '~/modules/@wmeimob/taro-design/src/components/utils'
 import * as styles from './index.module.less'
-import { getResizeUrl } from '~/modules/@wmeimob/aliyun';
+import { getResizeUrl } from '~/modules/@wmeimob/aliyun'
 import { observer } from '@tarojs/mobx'
-import { toast, requestOnOff, sleep, enlarge, sampleImg, isScan } from '~/components/utils'
+import {
+  toast,
+  requestOnOff,
+  sleep,
+  enlarge,
+  sampleImg,
+  isScan,
+} from '~/components/utils'
 import { apiUrl } from '~/config'
 import { post } from '~/components/request'
 
@@ -29,7 +36,7 @@ const Index: FC = () => {
     if (!reagentCode) {
       return toast.info('请扫描检测卡二维码或输入检测卡编码')
     }
-    if(!isScan(reagentCode)){
+    if (!isScan(reagentCode)) {
       return toast.info('请输入正确的检测编号')
     }
     if (!shiziPicFileId) {
@@ -167,11 +174,11 @@ const Index: FC = () => {
         <View className={styles.scan}>
           <View className={styles.key_left}>
             <Text className={styles.required}>*</Text>
-            受检人<Text style={{opacity: 0}}>的名字</Text>
+            受检人<Text style={{ opacity: 0 }}>的名字</Text>
           </View>
           <View className={styles.value_right}>
             <View className={styles.place} style={{ color: '#000' }}>
-              <Input value={resultInfo.userName || userName} disabled/>
+              <Input value={resultInfo.userName || userName} disabled />
             </View>
             <Image src={require('./img/img_scan.png')} style={{ opacity: 0 }} />
           </View>
@@ -232,9 +239,11 @@ const Index: FC = () => {
               src={resultInfo.shiziUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(5)}
             />
-            <Image src={sampleImg[0] + getResizeUrl({ width: 80, height: 120 })} onClick={() => enlarge(sampleImg[0])}>
-            <Text>示例</Text>
-
+            <Image
+              src={sampleImg[0] + getResizeUrl({ width: 80, height: 120 })}
+              onClick={() => enlarge(sampleImg[0])}
+            >
+              <Text>示例</Text>
             </Image>
           </View>
 
@@ -248,8 +257,11 @@ const Index: FC = () => {
               src={resultInfo.yangbenUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(7)}
             />
-            <Image src={sampleImg[1] + getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[1])}>
-            <Text>示例</Text>
+            <Image
+              src={sampleImg[1] + getResizeUrl({ width: 120, height: 120 })}
+              onClick={() => enlarge(sampleImg[1])}
+            >
+              <Text>示例</Text>
             </Image>
           </View>
 
@@ -263,7 +275,10 @@ const Index: FC = () => {
               src={resultInfo.shijikaUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(6)}
             />
-            <Image src={sampleImg[2] + getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[2])}>
+            <Image
+              src={sampleImg[2] + getResizeUrl({ width: 120, height: 120 })}
+              onClick={() => enlarge(sampleImg[2])}
+            >
               <Text>示例</Text>
             </Image>
           </View>
@@ -362,8 +377,11 @@ const Index: FC = () => {
               src={resultInfo.resultUrl || require('./img/img_camera.png')}
               onClick={() => onUploadClick(8)}
             />
-            <Image src={sampleImg[3]+ getResizeUrl({ width: 120, height: 120 })} onClick={() => enlarge(sampleImg[3])}>
-            <Text>示例</Text>
+            <Image
+              src={sampleImg[3] + getResizeUrl({ width: 120, height: 120 })}
+              onClick={() => enlarge(sampleImg[3])}
+            >
+              <Text>示例</Text>
             </Image>
           </View>
         </View>
@@ -375,7 +393,31 @@ const Index: FC = () => {
                 : require('./img/img_no.png')
             }
           />
-          我已阅读并同意<Text>《免责声明》</Text>
+          我已阅读并同意
+          <Text
+            onClick={() => {
+              if (!requestOnOff()) return
+              Taro.showLoading({ title: '加载中...' })
+              Taro.downloadFile({
+                // 示例 url，并非真实存在
+                url: 'https://covid-user-agreement.oss-cn-beijing.aliyuncs.com/user-agreement.pdf',
+                success: function(res) {
+                  const filePath = res.tempFilePath
+                  Taro.openDocument({
+                    filePath: filePath,
+                    success: function(res) {
+                      console.log('打开文档成功')
+                      Taro.hideLoading()
+                    },
+                  })
+                },
+                fail: () => Taro.hideLoading(),
+                complete: () => Taro.hideLoading(),
+              })
+            }}
+          >
+            《用户服务协议》
+          </Text>
         </View>
         <View
           className={styles.btn}
@@ -384,7 +426,7 @@ const Index: FC = () => {
             if (isRead) {
               submit()
             } else {
-              toast.info('请确保您已阅读免责声明')
+              toast.info('请确保您已阅读用户服务协议')
             }
           }}
         >

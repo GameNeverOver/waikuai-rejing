@@ -72,9 +72,9 @@
                 </view>
             </view>
             <view class="{{styles.read}}" bindtap="anonymousFunc13">
-                <image src="{{anonymousState__temp24}}"></image>我已阅读并同意<text>《免责声明》</text>
+                <image src="{{anonymousState__temp24}}"></image>我已阅读并同意<text bindtap="anonymousFunc14">《用户服务协议》</text>
             </view>
-            <view class="{{styles.btn}}" bindtap="anonymousFunc14">提交</view>
+            <view class="{{styles.btn}}" bindtap="anonymousFunc15">提交</view>
             <block wx:if="{{isNewIphone}}">
                 <view class="spacingIphone"></view>
             </block>
