@@ -89,3 +89,26 @@
   text-align: center;
   bottom: 0;
 }
+.index-module__addPeople_page___TclSz .index-module__read___zIDmT {
+  margin-top: 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 20px;
+}
+.index-module__addPeople_page___TclSz .index-module__read___zIDmT image {
+  width: calc(16 * 100vw / 375);
+  height: calc(16 * 100vw / 375);
+  margin-right: 6px;
+  display: block;
+}
+.index-module__addPeople_page___TclSz .index-module__read___zIDmT text {
+  color: #1174F4;
+}

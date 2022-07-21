@@ -7,7 +7,7 @@ import MMNavigation from '~/modules/@wmeimob/taro-design/src/components/navigati
 import { MMNavigationType } from '~/modules/@wmeimob/taro-design/src/components/navigation/const'
 import { isNewIphone } from '~/modules/@wmeimob/taro-design/src/components/utils'
 import * as styles from './index.module.less'
-import { toast, isMobile, isId, sleep } from '~/components/utils'
+import { toast, isMobile, isId, sleep, requestOnOff } from '~/components/utils'
 import { observer } from '@tarojs/mobx'
 import { post, get } from '~/components/request'
 
@@ -27,6 +27,7 @@ const throttle = (fu) => {
 
 const Index: FC = () => {
   const [content, setContent] = useState<any>({})
+  const [isRead, setIsRead] = useState(false)
   const { id } = useRouter().params
 
   useEffect(() => {
@@ -41,7 +42,6 @@ const Index: FC = () => {
   }
 
   const setVal = (key, val) => {
-    console.log(key, val, 'x')
     setContent((info) => ({
       ...info,
       [key]: val,
@@ -49,6 +49,9 @@ const Index: FC = () => {
   }
 
   const submit = async () => {
+    if (!isRead) {
+      return toast.info('请确保您已阅读用户服务协议')
+    }
     const {
       idCardNo,
       mobileNo,
@@ -203,6 +206,40 @@ const Index: FC = () => {
             placeholderStyle="color: #CCCCCC;"
             onInput={(e) => setVal('address', e.detail.value)}
           />
+        </View>
+        <View className={styles.read} onClick={() => setIsRead(true)}>
+          <Image
+            src={
+              isRead
+                ? require('./img_yse.png')
+                : require('./img_no.png')
+            }
+          />
+          我已阅读并同意
+          <Text
+            onClick={() => {
+              if (!requestOnOff()) return
+              Taro.showLoading({ title: '加载中...' })
+              Taro.downloadFile({
+                // 示例 url，并非真实存在
+                url: 'https://covid-user-agreement.oss-cn-beijing.aliyuncs.com/user-agreement.pdf',
+                success: function(res) {
+                  const filePath = res.tempFilePath
+                  Taro.openDocument({
+                    filePath: filePath,
+                    success: function(res) {
+                      console.log('打开文档成功')
+                      Taro.hideLoading()
+                    },
+                  })
+                },
+                fail: () => Taro.hideLoading(),
+                complete: () => Taro.hideLoading(),
+              })
+            }}
+          >
+            《用户服务协议》
+          </Text>
         </View>
       </View>
 

@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.addPeople_page}}">
-        <mm-navigation compid="{{$compid__13}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__27}}"></mm-navigation>
         <view class="{{styles.info}}">
             <view class="{{styles.record}}"><text style="{{anonymousState__temp}}">*</text>
                 <view class="{{styles.field}}">{{'姓名'}}</view>
@@ -36,7 +36,10 @@
                 <view class="{{styles.field}}">{{'详细地址'}}</view>
                 <input value="{{content.address || ''}}" placeholder="请输入" placeholder-style="color: #CCCCCC;" bindinput="anonymousFunc6" />
             </view>
+            <view class="{{styles.read}}" bindtap="anonymousFunc7">
+                <image src="{{anonymousState__temp12}}"></image>我已阅读并同意<text bindtap="anonymousFunc8">《用户服务协议》</text>
+            </view>
         </view>
-        <view class="{{styles.sub_btn}}" style="{{anonymousState__temp12}}" bindtap="anonymousFunc7">提交</view>
+        <view class="{{styles.sub_btn}}" style="{{anonymousState__temp13}}" bindtap="anonymousFunc9">提交</view>
     </view>
 </block>

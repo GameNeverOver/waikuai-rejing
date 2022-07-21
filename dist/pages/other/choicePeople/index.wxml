@@ -1,8 +1,8 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.choice_page}}">
-        <mm-navigation compid="{{$compid__16}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__14}}"></mm-navigation>
         <view class="{{styles.list}}">
-            <view class="{{styles.record}}" wx:key="id" bindtap="anonymousFunc0" wx:for="{{loopArray6}}" wx:for-item="ele" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{ele._$indexKey}}">
+            <view class="{{styles.record}}" wx:key="id" bindtap="anonymousFunc0" wx:for="{{loopArray5}}" wx:for-item="ele" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{ele._$indexKey}}">
                 <view>
                     <view class="{{styles.name}}">{{ele.$original.userName}}</view>
                     <view class="{{styles.id}}">证件号码：{{ele.$original.idCardNo}}</view>

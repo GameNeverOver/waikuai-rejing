@@ -77,7 +77,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '受检人',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp8", "loopArray4", "$compid__14", "styles", "arr", "isNewIphone"], _this.anonymousFunc1Map = {}, _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp8", "loopArray6", "$compid__15", "styles", "arr", "isNewIphone"], _this.anonymousFunc1Map = {}, _this.anonymousFunc2Map = {}, _this.anonymousFunc3Map = {}, _this.anonymousFunc4Map = {}, _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -98,10 +98,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__14 = _genCompid2[0],
-          $compid__14 = _genCompid2[1];
+          $prevCompid__15 = _genCompid2[0],
+          $compid__15 = _genCompid2[1];
 
       (0, _taroWeapp.useEffect)(function () {}, []);
 
@@ -250,20 +250,20 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
       var anonymousState__temp8 = __webpack_require__(/*! ./img/empty.png */ "./src/pages/other/peopleList/img/empty.png");
 
-      var loopArray4 = arr.map(function (ele, idx) {
+      var loopArray6 = arr.map(function (ele, idx) {
         ele = {
           $original: (0, _taroWeapp.internal_get_original)(ele)
         };
         var $loopState__temp5 = (0, _taroWeapp.internal_inline_style)({ right: start - end > 70 && idx == act ? '144px' : '0' });
 
-        var _$indexKey = "bazzz" + idx;
+        var _$indexKey = "bbzzz" + idx;
 
         _this2.anonymousFunc1Map[_$indexKey] = function (e) {
           setAct(idx);
           setStart(e.changedTouches[0].clientX);
         };
 
-        var _$indexKey2 = "bbzzz" + idx;
+        var _$indexKey2 = "bczzz" + idx;
 
         _this2.anonymousFunc2Map[_$indexKey2] = function (e) {
           setEnd(e.changedTouches[0].clientX);
@@ -271,7 +271,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
         var $loopState__temp7 = (0, _taroWeapp.internal_inline_style)({ opacity: start - end > 70 && idx == act ? 1 : 0 });
 
-        var _$indexKey3 = "bczzz" + idx;
+        var _$indexKey3 = "bdzzz" + idx;
 
         _this2.anonymousFunc3Map[_$indexKey3] = function () {
           setFirst(true);
@@ -279,7 +279,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           setAct(null);
         };
 
-        var _$indexKey4 = "bdzzz" + idx;
+        var _$indexKey4 = "bezzz" + idx;
 
         _this2.anonymousFunc4Map[_$indexKey4] = function () {
           return _taroWeapp2.default.showModal({
@@ -306,14 +306,14 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": "\u53D7\u68C0\u4EBA"
-      }, $compid__14, $prevCompid__14);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
         anonymousState__temp3: anonymousState__temp3,
         anonymousState__temp8: anonymousState__temp8,
-        loopArray4: loopArray4,
-        $compid__14: $compid__14,
+        loopArray6: loopArray6,
+        $compid__15: $compid__15,
         styles: styles,
         arr: arr,
         isNewIphone: _index.isNewIphone

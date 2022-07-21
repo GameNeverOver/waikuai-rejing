@@ -86,7 +86,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '受检记录',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp5", "loopArray5", "$compid__15", "styles", "arr", "resultEnum"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp5", "loopArray4", "$compid__13", "styles", "arr", "resultEnum"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -107,10 +107,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__15 = _genCompid2[0],
-          $compid__15 = _genCompid2[1];
+          $prevCompid__13 = _genCompid2[0],
+          $compid__13 = _genCompid2[1];
 
       var _useState = (0, _taroWeapp.useState)(1),
           _useState2 = _slicedToArray(_useState, 2),
@@ -179,7 +179,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
 
       var anonymousState__temp5 = __webpack_require__(/*! ./img/empty.png */ "./src/pages/other/checkList/img/empty.png");
 
-      var loopArray5 = arr.map(function (ele, _anonIdx) {
+      var loopArray4 = arr.map(function (ele, _anonIdx) {
         ele = {
           $original: (0, _taroWeapp.internal_get_original)(ele)
         };
@@ -194,11 +194,11 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": '\u53D7\u68C0\u8BB0\u5F55'
-      }, $compid__15, $prevCompid__15);
+      }, $compid__13, $prevCompid__13);
       Object.assign(this.__state, {
         anonymousState__temp5: anonymousState__temp5,
-        loopArray5: loopArray5,
-        $compid__15: $compid__15,
+        loopArray4: loopArray4,
+        $compid__13: $compid__13,
         styles: styles,
         arr: arr,
         resultEnum: resultEnum

@@ -93,7 +93,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '添加受检人',
       navigationStyle: 'custom'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "$compid__13", "styles", "content"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "$compid__27", "styles", "content"], _this.customComponents = ["MMNavigation"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -114,15 +114,20 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__27"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__13 = _genCompid2[0],
-          $compid__13 = _genCompid2[1];
+          $prevCompid__27 = _genCompid2[0],
+          $compid__27 = _genCompid2[1];
 
       var _useState = (0, _taroWeapp.useState)({}),
           _useState2 = _slicedToArray(_useState, 2),
           content = _useState2[0],
           setContent = _useState2[1];
+
+      var _useState3 = (0, _taroWeapp.useState)(false),
+          _useState4 = _slicedToArray(_useState3, 2),
+          isRead = _useState4[0],
+          setIsRead = _useState4[1];
 
       var id = (0, _taroWeapp.useRouter)().params.id;
 
@@ -163,7 +168,6 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         };
       }();
       var setVal = function setVal(key, val) {
-        console.log(key, val, 'x');
         setContent(function (info) {
           return _extends({}, info, _defineProperty({}, key, val));
         });
@@ -176,49 +180,57 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
             while (1) {
               switch (_context2.prev = _context2.next) {
                 case 0:
+                  if (isRead) {
+                    _context2.next = 2;
+                    break;
+                  }
+
+                  return _context2.abrupt("return", _index2.toast.info('请确保您已阅读用户服务协议'));
+
+                case 2:
                   idCardNo = content.idCardNo, mobileNo = content.mobileNo, userName = content.userName, purban = content.purban, sex = content.sex, purbanCodes = content.purbanCodes, street = content.street, address = content.address;
 
                   if (userName) {
-                    _context2.next = 3;
+                    _context2.next = 5;
                     break;
                   }
 
                   return _context2.abrupt("return", _index2.toast.info('请输入姓名'));
 
-                case 3:
+                case 5:
                   if (sex) {
-                    _context2.next = 5;
+                    _context2.next = 7;
                     break;
                   }
 
                   return _context2.abrupt("return", _index2.toast.info('请选择性别'));
 
-                case 5:
+                case 7:
                   if ((0, _index2.isId)(idCardNo)) {
-                    _context2.next = 7;
+                    _context2.next = 9;
                     break;
                   }
 
                   return _context2.abrupt("return", _index2.toast.info('请输入正确的身份证号'));
 
-                case 7:
+                case 9:
                   if ((0, _index2.isMobile)(mobileNo)) {
-                    _context2.next = 9;
+                    _context2.next = 11;
                     break;
                   }
 
                   return _context2.abrupt("return", _index2.toast.info('请输入正确的手机号'));
 
-                case 9:
+                case 11:
                   if (purban) {
-                    _context2.next = 11;
+                    _context2.next = 13;
                     break;
                   }
 
                   return _context2.abrupt("return", _index2.toast.info('请选择省市区'));
 
-                case 11:
-                  _context2.next = 13;
+                case 13:
+                  _context2.next = 15;
                   return (0, _index3.post)('/checked/user/add', {
                     id: id || null,
                     idCardNo: idCardNo,
@@ -231,7 +243,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
                     address: address
                   });
 
-                case 13:
+                case 15:
                   _ref5 = _context2.sent;
                   data = _ref5.data;
 
@@ -242,7 +254,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
                     });
                   }
 
-                case 16:
+                case 18:
                 case "end":
                   return _context2.stop();
               }
@@ -315,14 +327,46 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         return setVal('address', e.detail.value);
       };
 
-      var anonymousState__temp12 = (0, _taroWeapp.internal_inline_style)({ bottom: _index.isNewIphone ? '34px' : 0 });
-      this.anonymousFunc7 = throttle(function () {
+      this.anonymousFunc7 = function () {
+        return setIsRead(true);
+      };
+
+      var anonymousState__temp12 = isRead ? __webpack_require__(/*! ./img_yse.png */ "./src/pages/other/addPeople/img_yse.png") : __webpack_require__(/*! ./img_no.png */ "./src/pages/other/addPeople/img_no.png");
+
+      this.anonymousFunc8 = function () {
+        if (!(0, _index2.requestOnOff)()) {
+          return;
+        }_taroWeapp2.default.showLoading({ title: '加载中...' });
+        _taroWeapp2.default.downloadFile({
+          // 示例 url，并非真实存在
+          url: 'https://covid-user-agreement.oss-cn-beijing.aliyuncs.com/user-agreement.pdf',
+          success: function success(res) {
+            var filePath = res.tempFilePath;
+            _taroWeapp2.default.openDocument({
+              filePath: filePath,
+              success: function success(res) {
+                console.log('打开文档成功');
+                _taroWeapp2.default.hideLoading();
+              }
+            });
+          },
+          fail: function fail() {
+            return _taroWeapp2.default.hideLoading();
+          },
+          complete: function complete() {
+            return _taroWeapp2.default.hideLoading();
+          }
+        });
+      };
+
+      var anonymousState__temp13 = (0, _taroWeapp.internal_inline_style)({ bottom: _index.isNewIphone ? '34px' : 0 });
+      this.anonymousFunc9 = throttle(function () {
         return submit();
       });
       _taroWeapp.propsManager.set({
         "type": _const.MMNavigationType.Transparent,
         "title": "\u53D7\u68C0\u4EBA"
-      }, $compid__13, $prevCompid__13);
+      }, $compid__27, $prevCompid__27);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -336,7 +380,8 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp10: anonymousState__temp10,
         anonymousState__temp11: anonymousState__temp11,
         anonymousState__temp12: anonymousState__temp12,
-        $compid__13: $compid__13,
+        anonymousState__temp13: anonymousState__temp13,
+        $compid__27: $compid__27,
         styles: styles,
         content: content
       });
@@ -382,10 +427,20 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     value: function anonymousFunc7(e) {
       ;
     }
+  }, {
+    key: "anonymousFunc8",
+    value: function anonymousFunc8(e) {
+      ;
+    }
+  }, {
+    key: "anonymousFunc9",
+    value: function anonymousFunc9(e) {
+      ;
+    }
   }]);
 
   return Index;
-}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7"], _class.$$componentPath = "pages/other/addPeople/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9"], _class.$$componentPath = "pages/other/addPeople/index", _temp2);
 
 
 Index.config = { navigationBarTitleText: '添加受检人', navigationStyle: 'custom' };
@@ -410,6 +465,28 @@ module.exports = __webpack_require__.p + "pages/other/addPeople/index.wxml";
 
 /***/ }),
 
+/***/ "./src/pages/other/addPeople/img_no.png":
+/*!**********************************************!*\
+  !*** ./src/pages/other/addPeople/img_no.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAsJJREFUWEfNlz1oU1EUx/8nfU0iCSkiYhcXMUIw1sJ9jakoFgeXTmJFxVWdXayD4CA4tC6ufqyiYMUpi4NUFI3hXqg1EjDi4lIVkYYEX+LrO3LqS6mxNaEhfd7lDe+ee373fN1zCB2uYrEYr9fr4wCOMvN+ALuIKCHizFwB8JGI3gB4GolEcul0utrJ0dRukzFmNzNfBnAGQKzdfv9/DcB9IppSSn34l8y6AOVyOVKpVK4BuMjMYSLyADwHkGPmV67rluPx+Hc5vFqtbrUsK0lEowDESoeZOUREDQA3E4nE1WQyWV8LZE2AQqEwGAqFHgPIioUBPLIs68rw8PD7TiwwNze3x3Xd6wBOABAdec/zjmcymYVW+b8A5ufn9zUajRyAnb5fzyql8p0obt1jjMky8z2JFwCfwuHw+NDQ0NvV+/4A8G9e8JXPxmKxiVQq9W0jypsypVJpW61WmwEwJhCe52VWW2IFQHy+uLg465tdvsds2/7ZjfKmrNa6H8ATHyI/MDAw1oyJFQBjzBQzT4rZY7FYptubt4L7lhDrSvpOK6Uks5YDBJJqAN4xcz8RHdyoz9tZy4+Jl0Qklt0rKboMoLW+A+AcgBnbtk+2O6ib/1rrhwAmANy1bfs8SYVzHGeBiLb09fWlOk21jUJIii4tLZWY+Uc0Gh0kY8wpZn5ARM+UUhKpPV/GmFlmPkJEpwXgFjNfkAAcGRm50XPtv2PuEjNPE9Ft0lpLkTkg5dO27RebAaC1PuSX9dcC8AXAdtd1B7PZ7OfNAMjn8zssy5Ky/FVc4DBzJBqNRtLptDwePV/FYjHsOE6diOrBAwTugsCDsJmGRDSplNr8NAy8EAVeigN/jP6L59iHCK4hEYDAWzKBCLQpbT4AgbblTYhAB5MmxHqjmed5OSJaczRj5tFQKNT9aLb6PQ5sOG1tCno1nv8Cp5sKfaeWm7UAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "./src/pages/other/addPeople/img_yse.png":
+/*!***********************************************!*\
+  !*** ./src/pages/other/addPeople/img_yse.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAj9JREFUWEfNVz1ME2EYfp720kqvYs+EhEEX40aMTsJoXImDkxpXZcNo0rObRrdaE41MoqvRzcGwGsfipDFsxgUHIkOx3hXatH3MXW0t0HIH1nx8wy33vO/7fO/3/hIxz8R9ZVu1zVlBFyGdFXAK4HhHXFUC30B+Jvg+mRlbWn9AL45qRoHG7/w8nbCsAoVrgOwofOc/fRGv281msfrk2Ne9ZIYTmFfaOeI/lHibUCqe4e0ogQ1STytb9j0ssD5Ix0ACtutNptp6C3LmIIZ3yUjlRoKX/VJ2bee/XQScQv0MWs0lQCdHYrynhKtIWrOVYvpLv95tBMKbix9Hb7xrkqsN6ny/J/4SCN485X0YmduHuU8qVxrZC92Y6BFwXK8I4e5o3T5EG/GoUsoWwnwJPmGqJa2Vg0b7fkkH2dFuNaeCFA0J5Fz/BaUb+1X0L3iRLzdK9k0GFa7p19biFhmBdRKLLfFV2h5bCUjU/c2pJHVdwhyhdDxi9C07M8njbu2K1H4TTwjfRVzaKGU/DcLnXO8cxXeATsTRRyau0nH955DmogSCm4OaGWa8Kx+QgFiO5QlykU7eKwOYjiIAcqFSsm9F4gA4rv8M0nwM7DJzee8HgYkocAuJmerjzHIULsyqfG06iXZwsT2PgHXm8v5WHHdZtn00bovtBLb/K5oA64eBgOEnMB6ExtPQeCEyXoqNN6ND0Y4DEkYHkrBimR7JAg5mh9I/hdvoWN5tHkYXk14HM7ma9bdRc8vpjmb+v9bz34seiWayDsykAAAAAElFTkSuQmCC"
+
+/***/ }),
+
 /***/ "./src/pages/other/addPeople/index.module.less":
 /*!*****************************************************!*\
   !*** ./src/pages/other/addPeople/index.module.less ***!
@@ -418,7 +495,7 @@ module.exports = __webpack_require__.p + "pages/other/addPeople/index.wxml";
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"addPeople_page":"index-module__addPeople_page___TclSz","info":"index-module__info___2u-2m","record":"index-module__record___12IsV","field":"index-module__field___3FLi3","val":"index-module__val___1_XQC","sub_btn":"index-module__sub_btn___28DGE"};
+module.exports = {"addPeople_page":"index-module__addPeople_page___TclSz","info":"index-module__info___2u-2m","record":"index-module__record___12IsV","field":"index-module__field___3FLi3","val":"index-module__val___1_XQC","sub_btn":"index-module__sub_btn___28DGE","read":"index-module__read___zIDmT"};
 
 /***/ }),
 
