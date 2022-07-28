@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.addPeople_page}}">
-        <mm-navigation compid="{{$compid__27}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__16}}"></mm-navigation>
         <view class="{{styles.info}}">
             <view class="{{styles.record}}"><text style="{{anonymousState__temp}}">*</text>
                 <view class="{{styles.field}}">{{'姓名'}}</view>

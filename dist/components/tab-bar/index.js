@@ -128,29 +128,29 @@ var MMTabBar = MMTabBar_1 = (_temp2 = _class = function (_PureComponent) {
 
         var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bgzzzzzzzz" + index, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__16 = _genCompid2[0],
-            $compid__16 = _genCompid2[1];
+            $prevCompid__17 = _genCompid2[0],
+            $compid__17 = _genCompid2[1];
 
         value.$original.redHot && _taroWeapp.propsManager.set({
           "absolute": true
-        }, $compid__16, $prevCompid__16);
+        }, $compid__17, $prevCompid__17);
 
         var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bhzzzzzzzz" + index, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__17 = _genCompid4[0],
-            $compid__17 = _genCompid4[1];
+            $prevCompid__18 = _genCompid4[0],
+            $compid__18 = _genCompid4[1];
 
         value.$original.count && _taroWeapp.propsManager.set({
           "value": value.$original.count,
           "digit": 2,
           "absolute": true
-        }, $compid__17, $prevCompid__17);
+        }, $compid__18, $prevCompid__18);
         return {
           _$indexKey: _$indexKey,
           $loopState__temp2: $loopState__temp2,
           $loopState__temp4: $loopState__temp4,
-          $compid__16: $compid__16,
           $compid__17: $compid__17,
+          $compid__18: $compid__18,
           $original: value.$original
         };
       });

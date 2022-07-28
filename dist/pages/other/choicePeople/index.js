@@ -194,7 +194,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
           $original: (0, _taroWeapp.internal_get_original)(ele)
         };
 
-        var _$indexKey = "bazzz" + idx;
+        var _$indexKey = "bezzz" + idx;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           var archive = _taroWeapp2.default.getStorageSync('archive');

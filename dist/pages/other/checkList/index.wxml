@@ -1,8 +1,8 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.check_page}}">
-        <mm-navigation compid="{{$compid__13}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__15}}"></mm-navigation>
         <view class="{{styles.list}}">
-            <view class="{{styles.record_box}}" wx:key="id" wx:for="{{loopArray4}}" wx:for-item="ele" wx:for-index="_anonIdx2">
+            <view class="{{styles.record_box}}" wx:key="id" wx:for="{{loopArray6}}" wx:for-item="ele" wx:for-index="_anonIdx2">
                 <view class="{{styles.record}}">
                     <image src="{{ele.$loopState__temp2}}"></image>
                     <view class="{{styles.info}}"><text class="{{styles.name}}">{{ele.$original.userName}}</text>

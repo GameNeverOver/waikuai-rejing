@@ -385,7 +385,7 @@ const Index: FC = () => {
             </Image>
           </View>
         </View>
-        <View className={styles.read} onClick={() => setIsRead(true)}>
+        {/* <View className={styles.read} onClick={() => setIsRead(true)}>
           <Image
             src={
               isRead
@@ -418,16 +418,16 @@ const Index: FC = () => {
           >
             《用户服务协议》
           </Text>
-        </View>
+        </View> */}
         <View
           className={styles.btn}
           onClick={() => {
             if (!requestOnOff()) return
-            if (isRead) {
-              submit()
-            } else {
-              toast.info('请确保您已阅读用户服务协议')
-            }
+            submit()
+            // if (isRead) {
+            // } else {
+            //   toast.info('请确保您已阅读用户服务协议')
+            // }
           }}
         >
           提交

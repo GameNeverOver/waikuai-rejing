@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="{{styles.people_page}}">
-        <mm-navigation compid="{{$compid__15}}"></mm-navigation>
+        <mm-navigation compid="{{$compid__13}}"></mm-navigation>
         <view class="{{styles.sadd_action}}" bindtap="anonymousFunc0">
             <view style="{{anonymousState__temp}}">
                 <image src="{{anonymousState__temp2}}" class="{{styles.add_img}}"></image>
@@ -9,7 +9,7 @@
             <image src="{{anonymousState__temp3}}" class="{{styles.img_right}}"></image>
         </view>
         <view class="{{styles.list}}">
-            <view wx:key="id" class="{{styles.record}}" style="{{ele.$loopState__temp5}}" wx:for="{{loopArray6}}" wx:for-item="ele" wx:for-index="idx">
+            <view wx:key="id" class="{{styles.record}}" style="{{ele.$loopState__temp5}}" wx:for="{{loopArray4}}" wx:for-item="ele" wx:for-index="idx">
                 <view bindtouchstart="anonymousFunc1" bindtouchend="anonymousFunc2" data-e-touchstart-so="this" data-e-touchstart-a-a="{{ele._$indexKey}}" data-e-touchend-so="this" data-e-touchend-a-a="{{ele._$indexKey2}}">
                     <view class="{{styles.name}}">{{ele.$original.userName}}</view>
                     <view class="{{styles.id}}">证件号码：{{ele.$original.idCardNo}}</view>

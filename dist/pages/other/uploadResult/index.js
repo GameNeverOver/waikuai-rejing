@@ -79,7 +79,7 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
       navigationBarTitleText: '结果上传',
       navigationBarBackgroundColor: '#fff'
-    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "anonymousState__temp15", "anonymousState__temp16", "anonymousState__temp17", "anonymousState__temp18", "anonymousState__temp19", "anonymousState__temp20", "anonymousState__temp21", "anonymousState__temp22", "anonymousState__temp23", "anonymousState__temp24", "styles", "resultInfo", "userName", "isNewIphone"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "anonymousState__temp10", "anonymousState__temp11", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "anonymousState__temp15", "anonymousState__temp16", "anonymousState__temp17", "anonymousState__temp18", "anonymousState__temp19", "anonymousState__temp20", "anonymousState__temp21", "anonymousState__temp22", "anonymousState__temp23", "styles", "resultInfo", "userName", "isNewIphone"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Index, [{
@@ -438,45 +438,13 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
       };
 
       this.anonymousFunc13 = function () {
-        return setIsRead(true);
-      };
-
-      var anonymousState__temp24 = isRead ? __webpack_require__(/*! ./img/img_yse.png */ "./src/pages/other/uploadResult/img/img_yse.png") : __webpack_require__(/*! ./img/img_no.png */ "./src/pages/other/uploadResult/img/img_no.png");
-
-      this.anonymousFunc14 = function () {
         if (!(0, _index3.requestOnOff)()) {
           return;
-        }_taroWeapp2.default.showLoading({ title: '加载中...' });
-        _taroWeapp2.default.downloadFile({
-          // 示例 url，并非真实存在
-          url: 'https://covid-user-agreement.oss-cn-beijing.aliyuncs.com/user-agreement.pdf',
-          success: function success(res) {
-            var filePath = res.tempFilePath;
-            _taroWeapp2.default.openDocument({
-              filePath: filePath,
-              success: function success(res) {
-                console.log('打开文档成功');
-                _taroWeapp2.default.hideLoading();
-              }
-            });
-          },
-          fail: function fail() {
-            return _taroWeapp2.default.hideLoading();
-          },
-          complete: function complete() {
-            return _taroWeapp2.default.hideLoading();
-          }
-        });
-      };
-
-      this.anonymousFunc15 = function () {
-        if (!(0, _index3.requestOnOff)()) {
-          return;
-        }if (isRead) {
-          submit();
-        } else {
-          _index3.toast.info('请确保您已阅读用户服务协议');
-        }
+        }submit();
+        // if (isRead) {
+        // } else {
+        //   toast.info('请确保您已阅读用户服务协议')
+        // }
       };
 
       Object.assign(this.__state, {
@@ -503,7 +471,6 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
         anonymousState__temp21: anonymousState__temp21,
         anonymousState__temp22: anonymousState__temp22,
         anonymousState__temp23: anonymousState__temp23,
-        anonymousState__temp24: anonymousState__temp24,
         styles: styles,
         resultInfo: resultInfo,
         userName: userName,
@@ -581,20 +548,10 @@ var Index = (_temp2 = _class = function (_Taro$Component) {
     value: function anonymousFunc13(e) {
       ;
     }
-  }, {
-    key: "anonymousFunc14",
-    value: function anonymousFunc14(e) {
-      ;
-    }
-  }, {
-    key: "anonymousFunc15",
-    value: function anonymousFunc15(e) {
-      ;
-    }
   }]);
 
   return Index;
-}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9", "anonymousFunc10", "anonymousFunc11", "anonymousFunc12", "anonymousFunc13", "anonymousFunc14", "anonymousFunc15"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2", "anonymousFunc3", "anonymousFunc4", "anonymousFunc5", "anonymousFunc6", "anonymousFunc7", "anonymousFunc8", "anonymousFunc9", "anonymousFunc10", "anonymousFunc11", "anonymousFunc12", "anonymousFunc13"], _class.$$componentPath = "pages/other/uploadResult/index", _temp2);
 
 
 Index.config = { navigationBarTitleText: '结果上传', navigationBarBackgroundColor: '#fff' };
